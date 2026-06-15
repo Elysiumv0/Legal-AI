@@ -1,0 +1,26 @@
+[project]
+name = "legal-ai"
+version = "0.1.0"
+description = "Vietnam Legal AI RAG"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "transformers",
+    "qdrant-client",
+    "rank-bm25",
+    "underthesea",
+    "langgraph",
+    "pyyaml",
+    "tqdm",
+    "pdfplumber",
+    "python-docx",
+    "pdf2image",
+    "pytesseract",
+    "fastapi",
+    "uvicorn",
+    "gradio"
+]
+
+[tool.setuptools]
+packages = ["legal_ai"]
+package-dir = {"" = "src"}

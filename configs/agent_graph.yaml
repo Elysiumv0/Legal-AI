@@ -1,0 +1,22 @@
+graph:
+  entry_point: researcher
+  max_retrieval_attempts: 3
+
+researcher:
+  enabled: true
+  max_sub_queries: 3
+  top_k_retrieve: 20
+  top_k_rerank: 10
+
+critic:
+  enabled: true
+  require_json: true
+  default_sufficient_on_parse_error: false
+
+drafter:
+  enabled: true
+  require_citations: true
+
+reviewer:
+  enabled: true
+  citation_check: true

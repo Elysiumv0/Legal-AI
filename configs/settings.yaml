@@ -1,0 +1,51 @@
+project:
+  name: legal-ai
+  environment: local
+
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  corpus_path: data/processed/corpus.json
+  chunks_path: data/processed/chunks.json
+  metadata_path: data/processed/metadata.json
+
+indexes:
+  bm25_path: data/indexes/bm25/bm25.pkl
+  qdrant_path: data/indexes/qdrant
+  colbert_root: data/indexes/colbert
+
+models:
+  embedding:
+    name: BAAI/bge-m3
+    batch_size: 8
+    max_length: 512
+    device: auto
+
+  reranker:
+    name: BAAI/bge-reranker-v2-m3
+    batch_size: 16
+    max_length: 512
+    device: auto
+
+  llm:
+    provider: local
+    model_name: Qwen/Qwen2.5-7B-Instruct
+    base_url: null
+    max_new_tokens: 1024
+    temperature: 0.1
+    device: auto
+
+retrieval:
+  top_k_bm25: 30
+  top_k_dense: 30
+  top_k_colbert: 20
+  top_k_rerank: 10
+  use_bm25: true
+  use_dense: true
+  use_colbert: false
+
+cache:
+  enabled: true
+  long_term_path: data/cache/long_term.json
+  ttl_days: 30
+  similarity_threshold: 0.92

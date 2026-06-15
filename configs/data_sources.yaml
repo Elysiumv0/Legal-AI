@@ -1,0 +1,301 @@
+# Khai báo văn bản pháp luật cần parse
+# Path tương đối từ thư mục gốc project Legal-AI
+# Lưu ý: các dòng law_name có thể chỉnh lại nếu file PDF thực tế là VBHN/số hiệu khác.
+sources:
+  - path: data/raw/luatatvsld.pdf
+    law_id: 84/2015/QH13
+    law_name: Luật An toàn, vệ sinh lao động
+    document_type: law
+    issued_date: "2015-06-25"
+    effective_date: "2016-07-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatbhxh.pdf
+    law_id: 58/VBHN-VPQH
+    law_name: Văn bản hợp nhất Luật Bảo hiểm xã hội
+    document_type: law
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatcanhtranh.pdf
+    law_id: 23/2018/QH14
+    law_name: Luật Cạnh tranh
+    document_type: law
+    issued_date: "2018-06-12"
+    effective_date: "2019-07-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatdansu.pdf
+    law_id: 91/2015/QH13
+    law_name: Bộ luật Dân sự
+    document_type: law
+    issued_date: "2015-11-24"
+    effective_date: "2017-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatdatdai.pdf
+    law_id: 31/2024/QH15
+    law_name: Luật Đất đai
+    document_type: law
+    issued_date: "2024-01-18"
+    effective_date: "2024-08-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatdauthau.pdf
+    law_id: 22/2023/QH15
+    law_name: Luật Đấu thầu
+    document_type: law
+    issued_date: "2023-06-23"
+    effective_date: "2024-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatdautu.pdf
+    law_id: 61/2020/QH14
+    law_name: Luật Đầu tư
+    document_type: law
+    issued_date: "2020-06-17"
+    effective_date: "2021-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luathotroDNVVN.pdf
+    law_id: 04/2017/QH14
+    law_name: Luật Hỗ trợ doanh nghiệp nhỏ và vừa
+    document_type: law
+    issued_date: "2017-06-12"
+    effective_date: "2018-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatketoan.pdf
+    law_id: 88/2015/QH13
+    law_name: Luật Kế toán
+    document_type: law
+    issued_date: "2015-11-20"
+    effective_date: "2017-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatlaodong.pdf
+    law_id: 45/2019/QH14
+    law_name: Bộ luật Lao động
+    document_type: law
+    issued_date: "2019-11-20"
+    effective_date: "2021-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatphasan.pdf
+    law_id: 51/2014/QH13
+    law_name: Luật Phá sản
+    document_type: law
+    issued_date: "2014-06-19"
+    effective_date: "2015-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatquangcao.pdf
+    law_id: 16/2012/QH13
+    law_name: Luật Quảng cáo
+    document_type: law
+    issued_date: "2012-06-21"
+    effective_date: "2013-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatquanlythue.pdf
+    law_id: 38/2019/QH14
+    law_name: Luật Quản lý thuế
+    document_type: law
+    issued_date: "2019-06-13"
+    effective_date: "2020-07-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatthongke.pdf
+    law_id: 89/2015/QH13
+    law_name: Luật Thống kê
+    document_type: law
+    issued_date: "2015-11-23"
+    effective_date: "2016-07-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatthuongmai.pdf
+    law_id: 36/2005/QH11
+    law_name: Luật Thương mại
+    document_type: law
+    issued_date: "2005-06-14"
+    effective_date: "2006-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luattotungdansu.pdf
+    law_id: 92/2015/QH13
+    law_name: Bộ luật Tố tụng dân sự
+    document_type: law
+    issued_date: "2015-11-25"
+    effective_date: "2016-07-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luattrongtaithuongmai.pdf
+    law_id: 54/2010/QH12
+    law_name: Luật Trọng tài thương mại
+    document_type: law
+    issued_date: "2010-06-17"
+    effective_date: "2011-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatvieclam.pdf
+    law_id: 38/2013/QH13
+    law_name: Luật Việc làm
+    document_type: law
+    issued_date: "2013-11-16"
+    effective_date: "2015-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatxaydung.pdf
+    law_id: 50/2014/QH13
+    law_name: Luật Xây dựng
+    document_type: law
+    issued_date: "2014-06-18"
+    effective_date: "2015-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/thuegtgt.pdf
+    law_id: 48/2024/QH15
+    law_name: Luật Thuế giá trị gia tăng
+    document_type: law
+    issued_date: "2024-11-26"
+    effective_date: "2025-07-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/thuetncn.pdf
+    law_id: 04/2007/QH12
+    law_name: Luật Thuế thu nhập cá nhân
+    document_type: law
+    issued_date: "2007-11-21"
+    effective_date: "2009-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/thuetndn.pdf
+    law_id: 14/2008/QH12
+    law_name: Luật Thuế thu nhập doanh nghiệp
+    document_type: law
+    issued_date: "2008-06-03"
+    effective_date: "2009-01-01"
+    source_url: ""
+    status: active
+
+  # Nhóm nghị định/văn bản xử phạt vi phạm hành chính
+  - path: "data/raw/xu phat/174_2026_ND-CP_15052026-signed.pdf"
+    law_id: 174/2026/NĐ-CP
+    law_name: Nghị định 174/2026/NĐ-CP
+    document_type: decree
+    issued_date: "2026-05-15"
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: "data/raw/xu phat/VanBanGoc_122.2020.NĐ-CP (PDF).pdf"
+    law_id: 122/2020/NĐ-CP
+    law_name: Nghị định 122/2020/NĐ-CP
+    document_type: decree
+    issued_date: "2020"
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/xu phat/buonbanhanggia.pdf
+    law_id: 98/2020/NĐ-CP
+    law_name: Nghị định xử phạt vi phạm hành chính trong hoạt động thương mại, buôn bán hàng giả, hàng cấm và bảo vệ quyền lợi người tiêu dùng
+    document_type: decree
+    issued_date: "2020-08-26"
+    effective_date: "2020-10-15"
+    source_url: ""
+    status: active
+
+  - path: data/raw/xu phat/canhtranh.pdf
+    law_id: 75/2019/NĐ-CP
+    law_name: Nghị định xử phạt vi phạm hành chính trong lĩnh vực cạnh tranh
+    document_type: decree
+    issued_date: "2019-09-26"
+    effective_date: "2019-12-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/xu phat/ketoan.pdf
+    law_id: 41/2018/NĐ-CP
+    law_name: Nghị định xử phạt vi phạm hành chính trong lĩnh vực kế toán, kiểm toán độc lập
+    document_type: decree
+    issued_date: "2018-03-12"
+    effective_date: "2018-05-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/xu phat/laodongBHXH.pdf
+    law_id: 12/2022/NĐ-CP
+    law_name: Nghị định xử phạt vi phạm hành chính trong lĩnh vực lao động, bảo hiểm xã hội, người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng
+    document_type: decree
+    issued_date: "2022-01-17"
+    effective_date: "2022-01-17"
+    source_url: ""
+    status: active
+
+  - path: data/raw/xu phat/phivalephi.pdf
+    law_id: 109/2013/NĐ-CP
+    law_name: Nghị định xử phạt vi phạm hành chính trong lĩnh vực quản lý giá, phí, lệ phí, hóa đơn
+    document_type: decree
+    issued_date: "2013-09-24"
+    effective_date: "2013-11-09"
+    source_url: ""
+    status: active
+
+  - path: data/raw/xu phat/quanlygia.pdf
+    law_id: 87/2024/NĐ-CP
+    law_name: Nghị định xử phạt vi phạm hành chính trong quản lý giá
+    document_type: decree
+    issued_date: "2024"
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/xu phat/sohuucongnghiep.pdf
+    law_id: 99/2013/NĐ-CP
+    law_name: Nghị định xử phạt vi phạm hành chính trong lĩnh vực sở hữu công nghiệp
+    document_type: decree
+    issued_date: "2013-08-29"
+    effective_date: "2013-10-15"
+    source_url: ""
+    status: active
+
+  - path: data/raw/xu phat/thuehoadon.pdf
+    law_id: 125/2020/NĐ-CP
+    law_name: Nghị định xử phạt vi phạm hành chính về thuế, hóa đơn
+    document_type: decree
+    issued_date: "2020-10-19"
+    effective_date: "2020-12-05"
+    source_url: ""
+    status: active
+
+  - path: data/raw/xu phat/tiente.pdf
+    law_id: 88/2019/NĐ-CP
+    law_name: Nghị định xử phạt vi phạm hành chính trong lĩnh vực tiền tệ và ngân hàng
+    document_type: decree
+    issued_date: "2019-11-14"
+    effective_date: "2019-12-31"
+    source_url: ""
+    status: active

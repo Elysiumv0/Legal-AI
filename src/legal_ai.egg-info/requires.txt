@@ -1,0 +1,15 @@
+torch
+transformers
+qdrant-client
+rank-bm25
+underthesea
+langgraph
+pyyaml
+tqdm
+pdfplumber
+python-docx
+pdf2image
+pytesseract
+fastapi
+uvicorn
+gradio
