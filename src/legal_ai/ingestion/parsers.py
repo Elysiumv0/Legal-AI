@@ -16,7 +16,7 @@ def parse_pdf_ocr(path: str) -> str:
     return text
 
 def split_by(text: str) -> list[dict]:
-    pattern = r'(Điều\s+\d+[a-z]?[\.\:].*?)(?=Điều\s+\d+[a-z]?[\.\:]|\Z)'
+    pattern = r'(Điều\s+\d+[a-z]?[\.\:]?.*?)(?=Điều\s+\d+[a-z]?[\.\:]?|\Z)'
     matches = re.findall(pattern, text, re.DOTALL | re.IGNORECASE)
     articles = []
     for match in matches:
@@ -50,6 +50,10 @@ def parse_docx(path: str) -> str:
     doc = Document(path)
     return "\n".join(p.text for p in doc.paragraphs if p.text.strip())
 
+def parse_txt(path: str) -> str:
+    with open(path, 'r', encoding='utf-8') as f:
+        return f.read()
+
 def parse_legal_file(
     file_path: str,
     law_id: str,
@@ -61,6 +65,8 @@ def parse_legal_file(
         raw_text = parse_pdf(file_path)
     elif suffix == ".docx":
         raw_text = parse_docx(file_path)
+    elif suffix == ".txt":
+        raw_text = parse_txt(file_path)
     elif suffix == ".doc":
         raise ValueError(f"Không hỗ trợ định dạng legacy .doc: {file_path}")
     else:
@@ -83,10 +89,6 @@ def parse_all(
     config_path: str = "configs/data_sources.yaml",
     output_path: str = "data/processed/corpus.json",
 ):
-    """
-    Load file mappings từ data_sources.yaml và parse tất cả văn bản pháp luật.
-    Không cần sửa code — chỉ cần edit file YAML.
-    """
     try:
         data_sources = load_data_sources(config_path)
     except FileNotFoundError:
@@ -123,7 +125,6 @@ def parse_all(
     if failed:
         print(f"Lỗi: {failed}")
     return corpus
-
 
 def _write_sample_config():
     sample = """# Khai báo văn bản pháp luật cần parse

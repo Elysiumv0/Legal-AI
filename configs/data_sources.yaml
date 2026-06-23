@@ -200,6 +200,231 @@ sources:
     source_url: ""
     status: active
 
+  - path: data/raw/luatdoanhnghiep.pdf
+    law_id: 59/2020/QH14
+    law_name: Luật Doanh nghiệp
+    document_type: law
+    issued_date: "2020-06-17"
+    effective_date: "2021-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatshtt.pdf
+    law_id: 50/2005/QH11
+    law_name: Luật Sở hữu trí tuệ
+    document_type: law
+    issued_date: "2005-11-29"
+    effective_date: "2006-07-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatbaovequyenloinguoitieudung.pdf
+    law_id: 19/2023/QH15
+    law_name: Luật Bảo vệ quyền lợi người tiêu dùng
+    document_type: law
+    issued_date: "2023-06-20"
+    effective_date: "2024-07-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luathinhsu.pdf
+    law_id: 100/2015/QH13
+    law_name: Bộ luật Hình sự
+    document_type: law
+    issued_date: "2015-11-27"
+    effective_date: "2018-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatATTP.pdf
+    law_id: 55/2010/QH12
+    law_name: Luật An toàn thực phẩm
+    document_type: law
+    issued_date: "2010-06-17"
+    effective_date: "2011-07-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatBHYT.pdf
+    law_id: 25/2008/QH12
+    law_name: Luật Bảo hiểm y tế
+    document_type: law
+    issued_date: "2008-11-14"
+    effective_date: "2009-07-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatbaovemoitruong.pdf
+    law_id: 72/2020/QH14
+    law_name: Luật Bảo vệ môi trường
+    document_type: law
+    issued_date: "2020-11-17"
+    effective_date: "2022-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatcactochuctindung.pdf
+    law_id: 32/2024/QH15
+    law_name: Luật Các tổ chức tín dụng
+    document_type: law
+    issued_date: "2024-01-18"
+    effective_date: "2024-07-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatchungkhoan.pdf
+    law_id: 54/2019/QH14
+    law_name: Luật Chứng khoán
+    document_type: law
+    issued_date: "2019-11-26"
+    effective_date: "2021-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatdautucong.pdf
+    law_id: 39/2019/QH14
+    law_name: Luật Đầu tư công
+    document_type: law
+    issued_date: "2019-06-13"
+    effective_date: "2020-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatdienluc.pdf
+    law_id: 28/2004/QH11
+    law_name: Luật Điện lực
+    document_type: law
+    issued_date: "2004-12-03"
+    effective_date: "2005-07-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatdulich.pdf
+    law_id: 09/2017/QH14
+    law_name: Luật Du lịch
+    document_type: law
+    issued_date: "2017-06-19"
+    effective_date: "2018-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatgiaoduc.pdf
+    law_id: 43/2019/QH14
+    law_name: Luật Giáo dục
+    document_type: law
+    issued_date: "2019-06-14"
+    effective_date: "2020-07-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luathaiquan.pdf
+    law_id: 54/2014/QH13
+    law_name: Luật Hải quan
+    document_type: law
+    issued_date: "2014-06-23"
+    effective_date: "2015-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luathonnhanvagiadinh.pdf
+    law_id: 52/2014/QH13
+    law_name: Luật Hôn nhân và gia đình
+    document_type: law
+    issued_date: "2014-06-19"
+    effective_date: "2015-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatkhamchuabenh.pdf
+    law_id: 15/2023/QH15
+    law_name: Luật Khám bệnh, chữa bệnh
+    document_type: law
+    issued_date: "2023-01-09"
+    effective_date: "2024-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatkhcn.pdf
+    law_id: 29/2013/QH13
+    law_name: Luật Khoa học và công nghệ
+    document_type: law
+    issued_date: "2013-06-18"
+    effective_date: "2014-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatkinhdoanhBĐS.pdf
+    law_id: 29/2023/QH15
+    law_name: Luật Kinh doanh bất động sản
+    document_type: law
+    issued_date: "2023-11-28"
+    effective_date: "2025-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatnganhangnhanuoc.pdf
+    law_id: 46/2010/QH12
+    law_name: Luật Ngân hàng Nhà nước Việt Nam
+    document_type: law
+    issued_date: "2010-06-16"
+    effective_date: "2010-10-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatnhao.pdf
+    law_id: 27/2023/QH15
+    law_name: Luật Nhà ở
+    document_type: law
+    issued_date: "2023-11-27"
+    effective_date: "2025-01-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatthanhtra.pdf
+    law_id: 11/2022/QH15
+    law_name: Luật Thanh tra
+    document_type: law
+    issued_date: "2022-11-14"
+    effective_date: "2023-07-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatthuenhapkhauxuatkhau.pdf
+    law_id: 107/2016/QH13
+    law_name: Luật Thuế xuất khẩu, thuế nhập khẩu
+    document_type: law
+    issued_date: "2016-04-06"
+    effective_date: "2016-09-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatthuetieuthudacbiet.pdf
+    law_id: 27/2008/QH12
+    law_name: Luật Thuế tiêu thụ đặc biệt
+    document_type: law
+    issued_date: "2008-11-14"
+    effective_date: "2009-04-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luattotunghanhchinh.pdf
+    law_id: 93/2015/QH13
+    law_name: Luật Tố tụng hành chính
+    document_type: law
+    issued_date: "2015-11-25"
+    effective_date: "2016-07-01"
+    source_url: ""
+    status: active
+
+  - path: data/raw/luatxulyviphamhanhchinh.pdf
+    law_id: 15/2012/QH13
+    law_name: Luật Xử lý vi phạm hành chính
+    document_type: law
+    issued_date: "2012-06-20"
+    effective_date: "2013-07-01"
+    source_url: ""
+    status: active
+
   # Nhóm nghị định/văn bản xử phạt vi phạm hành chính
   - path: "data/raw/xu phat/174_2026_ND-CP_15052026-signed.pdf"
     law_id: 174/2026/NĐ-CP
@@ -297,5 +522,2751 @@ sources:
     document_type: decree
     issued_date: "2019-11-14"
     effective_date: "2019-12-31"
+    source_url: ""
+    status: active
+
+
+  - path: data/raw/vbpl_update/01_2026_TT-BGDĐT.txt
+    law_id: 01/2026/TT-BGDĐT
+    law_name: 01/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/01_2026_TT-NHNN.txt
+    law_id: 01/2026/TT-NHNN
+    law_name: 01/2026/TT-NHNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/01_2026_TTLT-BCA-VKSNDTC-TANDTC.txt
+    law_id: 01/2026/TTLT-BCA-VKSNDTC-TANDTC
+    law_name: 01/2026/TTLT-BCA-VKSNDTC-TANDTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/02_2026_TT-BGDĐT.txt
+    law_id: 02/2026/TT-BGDĐT
+    law_name: 02/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/02_2026_TT-BNG.txt
+    law_id: 02/2026/TT-BNG
+    law_name: 02/2026/TT-BNG
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/02_2026_TT-BTP.txt
+    law_id: 02/2026/TT-BTP
+    law_name: 02/2026/TT-BTP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/02_2026_TT-BVHTTDL.txt
+    law_id: 02/2026/TT-BVHTTDL
+    law_name: 02/2026/TT-BVHTTDL
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/02_2026_TT-BYT.txt
+    law_id: 02/2026/TT-BYT
+    law_name: 02/2026/TT-BYT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/02_2026_TTLT-BCA-BQP-BTP-VKSNDTC-TANDTC.txt
+    law_id: 02/2026/TTLT-BCA-BQP-BTP-VKSNDTC-TANDTC
+    law_name: 02/2026/TTLT-BCA-BQP-BTP-VKSNDTC-TANDTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/03_2026_TT-BGDĐT.txt
+    law_id: 03/2026/TT-BGDĐT
+    law_name: 03/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/03_2026_TT-BKHCN.txt
+    law_id: 03/2026/TT-BKHCN
+    law_name: 03/2026/TT-BKHCN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/03_2026_TT-BNG.txt
+    law_id: 03/2026/TT-BNG
+    law_name: 03/2026/TT-BNG
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/03_2026_TT-BNV.txt
+    law_id: 03/2026/TT-BNV
+    law_name: 03/2026/TT-BNV
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/03_2026_TT-BTP.txt
+    law_id: 03/2026/TT-BTP
+    law_name: 03/2026/TT-BTP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/03_2026_TT-BVHTTDL.txt
+    law_id: 03/2026/TT-BVHTTDL
+    law_name: 03/2026/TT-BVHTTDL
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/03_2026_TT-BXD.txt
+    law_id: 03/2026/TT-BXD
+    law_name: 03/2026/TT-BXD
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/03_2026_TT-BYT.txt
+    law_id: 03/2026/TT-BYT
+    law_name: 03/2026/TT-BYT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/03_2026_TT-NHNN.txt
+    law_id: 03/2026/TT-NHNN
+    law_name: 03/2026/TT-NHNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/04_2026_TT-BGDĐT.txt
+    law_id: 04/2026/TT-BGDĐT
+    law_name: 04/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/04_2026_TT-BKHCN.txt
+    law_id: 04/2026/TT-BKHCN
+    law_name: 04/2026/TT-BKHCN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/04_2026_TT-BNG.txt
+    law_id: 04/2026/TT-BNG
+    law_name: 04/2026/TT-BNG
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/04_2026_TT-BNV.txt
+    law_id: 04/2026/TT-BNV
+    law_name: 04/2026/TT-BNV
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/04_2026_TT-BTP.txt
+    law_id: 04/2026/TT-BTP
+    law_name: 04/2026/TT-BTP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/04_2026_TT-BVHTTDL.txt
+    law_id: 04/2026/TT-BVHTTDL
+    law_name: 04/2026/TT-BVHTTDL
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/04_2026_TT-BXD.txt
+    law_id: 04/2026/TT-BXD
+    law_name: 04/2026/TT-BXD
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/04_2026_TT-BYT.txt
+    law_id: 04/2026/TT-BYT
+    law_name: 04/2026/TT-BYT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/04_2026_TT-KTNN.txt
+    law_id: 04/2026/TT-KTNN
+    law_name: 04/2026/TT-KTNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/04_2026_TT-NHNN.txt
+    law_id: 04/2026/TT-NHNN
+    law_name: 04/2026/TT-NHNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/04_2026_TTLT-BCA-BQP -VKSNDTC-TANDTC.txt
+    law_id: 04/2026/TTLT-BCA-BQP -VKSNDTC-TANDTC
+    law_name: 04/2026/TTLT-BCA-BQP -VKSNDTC-TANDTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/04_2026_TTLT-VKSNDTC- TANDTC-BCA-BQP.txt
+    law_id: 04/2026/TTLT-VKSNDTC- TANDTC-BCA-BQP
+    law_name: 04/2026/TTLT-VKSNDTC- TANDTC-BCA-BQP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/05_2025_TT-BCT.txt
+    law_id: 05/2025/TT-BCT
+    law_name: 05/2025/TT-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/05_2026_QĐ-TTg.txt
+    law_id: 05/2026/QĐ-TTg
+    law_name: 05/2026/QĐ-TTg
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/05_2026_TT-BGDĐT.txt
+    law_id: 05/2026/TT-BGDĐT
+    law_name: 05/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/05_2026_TT-BNV.txt
+    law_id: 05/2026/TT-BNV
+    law_name: 05/2026/TT-BNV
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/05_2026_TT-BTC.txt
+    law_id: 05/2026/TT-BTC
+    law_name: 05/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/05_2026_TT-BVHTTDL.txt
+    law_id: 05/2026/TT-BVHTTDL
+    law_name: 05/2026/TT-BVHTTDL
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/05_2026_TT-BXD.txt
+    law_id: 05/2026/TT-BXD
+    law_name: 05/2026/TT-BXD
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/05_2026_TT-BYT.txt
+    law_id: 05/2026/TT-BYT
+    law_name: 05/2026/TT-BYT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/05_2026_TT-KTNN.txt
+    law_id: 05/2026/TT-KTNN
+    law_name: 05/2026/TT-KTNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/06_2025_TT-KTNN.txt
+    law_id: 06/2025/TT-KTNN
+    law_name: 06/2025/TT-KTNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/06_2026_TT-BGDĐT.txt
+    law_id: 06/2026/TT-BGDĐT
+    law_name: 06/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/06_2026_TT-BNV.txt
+    law_id: 06/2026/TT-BNV
+    law_name: 06/2026/TT-BNV
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/06_2026_TT-BTC.txt
+    law_id: 06/2026/TT-BTC
+    law_name: 06/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/06_2026_TT-BTС.txt
+    law_id: 06/2026/TT-BTС
+    law_name: 06/2026/TT-BTС
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/06_2026_TT-BVHTTDL.txt
+    law_id: 06/2026/TT-BVHTTDL
+    law_name: 06/2026/TT-BVHTTDL
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/06_2026_TT-BXD.txt
+    law_id: 06/2026/TT-BXD
+    law_name: 06/2026/TT-BXD
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/06_2026_TT-NHNN.txt
+    law_id: 06/2026/TT-NHNN
+    law_name: 06/2026/TT-NHNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/07_2026_QĐ-TTg.txt
+    law_id: 07/2026/QĐ-TTg
+    law_name: 07/2026/QĐ-TTg
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/07_2026_TT-BCT.txt
+    law_id: 07/2026/TT-BCT
+    law_name: 07/2026/TT-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/07_2026_TT-BGDĐT.txt
+    law_id: 07/2026/TT-BGDĐT
+    law_name: 07/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/07_2026_TT-BQP.txt
+    law_id: 07/2026/TT-BQP
+    law_name: 07/2026/TT-BQP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/07_2026_TT-BVHTTDL.txt
+    law_id: 07/2026/TT-BVHTTDL
+    law_name: 07/2026/TT-BVHTTDL
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/07_2026_TT-BXD.txt
+    law_id: 07/2026/TT-BXD
+    law_name: 07/2026/TT-BXD
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/07_2026_TT-KTNN.txt
+    law_id: 07/2026/TT-KTNN
+    law_name: 07/2026/TT-KTNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/07_2026_TT-NHNN.txt
+    law_id: 07/2026/TT-NHNN
+    law_name: 07/2026/TT-NHNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/08_2026_TT-BCT.txt
+    law_id: 08/2026/TT-BCT
+    law_name: 08/2026/TT-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/08_2026_TT-BGDĐT.txt
+    law_id: 08/2026/TT-BGDĐT
+    law_name: 08/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/08_2026_TT-BTC.txt
+    law_id: 08/2026/TT-BTC
+    law_name: 08/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/08_2026_TT-BVHTTDL.txt
+    law_id: 08/2026/TT-BVHTTDL
+    law_name: 08/2026/TT-BVHTTDL
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/08_2026_TT-BXD.txt
+    law_id: 08/2026/TT-BXD
+    law_name: 08/2026/TT-BXD
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/08_2026_TT-BYT.txt
+    law_id: 08/2026/TT-BYT
+    law_name: 08/2026/TT-BYT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/08_2026_TT-NHNN.txt
+    law_id: 08/2026/TT-NHNN
+    law_name: 08/2026/TT-NHNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/09_2026_TT-BCA.txt
+    law_id: 09/2026/TT-BCA
+    law_name: 09/2026/TT-BCA
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/09_2026_TT-BGDĐT.txt
+    law_id: 09/2026/TT-BGDĐT
+    law_name: 09/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/09_2026_TT-BNNMT.txt
+    law_id: 09/2026/TT-BNNMT
+    law_name: 09/2026/TT-BNNMT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/09_2026_TT-BQP.txt
+    law_id: 09/2026/TT-BQP
+    law_name: 09/2026/TT-BQP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/09_2026_TT-BTC.txt
+    law_id: 09/2026/TT-BTC
+    law_name: 09/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/09_2026_TT-BVHTTDL.txt
+    law_id: 09/2026/TT-BVHTTDL
+    law_name: 09/2026/TT-BVHTTDL
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/09_2026_TT-BXD.txt
+    law_id: 09/2026/TT-BXD
+    law_name: 09/2026/TT-BXD
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/102_2026_NĐ-CP.txt
+    law_id: 102/2026/NĐ-CP
+    law_name: 102/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/103_2026_NĐ-CP.txt
+    law_id: 103/2026/NĐ-CP
+    law_name: 103/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/104_2026_NĐ-CP.txt
+    law_id: 104/2026/NĐ-CP
+    law_name: 104/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/105_2026_NĐ-CP.txt
+    law_id: 105/2026/NĐ-CP
+    law_name: 105/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/108_2026_NĐ-CP.txt
+    law_id: 108/2026/NĐ-CP
+    law_name: 108/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/109_2026_NĐ-CP.txt
+    law_id: 109/2026/NĐ-CP
+    law_name: 109/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/10_2026_NQ-CP.txt
+    law_id: 10/2026/NQ-CP
+    law_name: 10/2026/NQ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/10_2026_QĐ-TTg.txt
+    law_id: 10/2026/QĐ-TTg
+    law_name: 10/2026/QĐ-TTg
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/10_2026_TT- BCA.txt
+    law_id: 10/2026/TT- BCA
+    law_name: 10/2026/TT- BCA
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/10_2026_TT-BGDĐT.txt
+    law_id: 10/2026/TT-BGDĐT
+    law_name: 10/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/10_2026_TT-BNV.txt
+    law_id: 10/2026/TT-BNV
+    law_name: 10/2026/TT-BNV
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/10_2026_TT-BXD.txt
+    law_id: 10/2026/TT-BXD
+    law_name: 10/2026/TT-BXD
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/112_2026_NĐ-CP.txt
+    law_id: 112/2026/NĐ-CP
+    law_name: 112/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/114_2026_NĐ-CP.txt
+    law_id: 114/2026/NĐ-CP
+    law_name: 114/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/115_2026_NĐ-CP.txt
+    law_id: 115/2026/NĐ-CP
+    law_name: 115/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/116_2026_NĐ-CP.txt
+    law_id: 116/2026/NĐ-CP
+    law_name: 116/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/117_2026_NĐ-CP.txt
+    law_id: 117/2026/NĐ-CP
+    law_name: 117/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/118_2026_NĐ-CP.txt
+    law_id: 118/2026/NĐ-CP
+    law_name: 118/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/119_2026_NĐ-CP.txt
+    law_id: 119/2026/NĐ-CP
+    law_name: 119/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/119_2026_UBTVQH15.txt
+    law_id: 119/2026/UBTVQH15
+    law_name: 119/2026/UBTVQH15
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/11_2026_NQ-CP.txt
+    law_id: 11/2026/NQ-CP
+    law_name: 11/2026/NQ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/11_2026_TT-BCT.txt
+    law_id: 11/2026/TT-BCT
+    law_name: 11/2026/TT-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/11_2026_TT-BGDĐT.txt
+    law_id: 11/2026/TT-BGDĐT
+    law_name: 11/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/11_2026_TT-BNNMT.txt
+    law_id: 11/2026/TT-BNNMT
+    law_name: 11/2026/TT-BNNMT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/11_2026_TT-BNV.txt
+    law_id: 11/2026/TT-BNV
+    law_name: 11/2026/TT-BNV
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/11_2026_TT-BTC.txt
+    law_id: 11/2026/TT-BTC
+    law_name: 11/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/11_2026_TT-BTС.txt
+    law_id: 11/2026/TT-BTС
+    law_name: 11/2026/TT-BTС
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/11_2026_TT-NHNN.txt
+    law_id: 11/2026/TT-NHNN
+    law_name: 11/2026/TT-NHNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/120_2026_UBTVQH15.txt
+    law_id: 120/2026/UBTVQH15
+    law_name: 120/2026/UBTVQH15
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/121_2026_NĐ-CP.txt
+    law_id: 121/2026/NĐ-CP
+    law_name: 121/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/124_2026_UBTVQH15.txt
+    law_id: 124/2026/UBTVQH15
+    law_name: 124/2026/UBTVQH15
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/128_2026_NĐ-CP.txt
+    law_id: 128/2026/NĐ-CP
+    law_name: 128/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/129_2026_NĐ-CP.txt
+    law_id: 129/2026/NĐ-CP
+    law_name: 129/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/12_2026_TT-BCT.txt
+    law_id: 12/2026/TT-BCT
+    law_name: 12/2026/TT-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/12_2026_TT-BGDĐT.txt
+    law_id: 12/2026/TT-BGDĐT
+    law_name: 12/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/12_2026_TT-BTC.txt
+    law_id: 12/2026/TT-BTC
+    law_name: 12/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/131_2026_NĐ-CP.txt
+    law_id: 131/2026/NĐ-CP
+    law_name: 131/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/132_2026_NĐ-CP.txt
+    law_id: 132/2026/NĐ-CP
+    law_name: 132/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/133_2026_NĐ-CP.txt
+    law_id: 133/2026/NĐ-CP
+    law_name: 133/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/135_2026_NĐ-CP.txt
+    law_id: 135/2026/NĐ-CP
+    law_name: 135/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/136_2026_NĐ-CP.txt
+    law_id: 136/2026/NĐ-CP
+    law_name: 136/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/138_2026_NĐ-CP.txt
+    law_id: 138/2026/NĐ-CP
+    law_name: 138/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/13_2026_TT-BCA.txt
+    law_id: 13/2026/TT-BCA
+    law_name: 13/2026/TT-BCA
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/13_2026_TT-BCT.txt
+    law_id: 13/2026/TT-BCT
+    law_name: 13/2026/TT-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/13_2026_TT-BGDĐT.txt
+    law_id: 13/2026/TT-BGDĐT
+    law_name: 13/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/13_2026_TT-BQP.txt
+    law_id: 13/2026/TT-BQP
+    law_name: 13/2026/TT-BQP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/140_2026_NĐ-CP.txt
+    law_id: 140/2026/NĐ-CP
+    law_name: 140/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/143_2026_NĐ-CP.txt
+    law_id: 143/2026/NĐ-CP
+    law_name: 143/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/144_2026_NĐ-CP.txt
+    law_id: 144/2026/NĐ-CP
+    law_name: 144/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/14_2026_TT-BCA.txt
+    law_id: 14/2026/TT-BCA
+    law_name: 14/2026/TT-BCA
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/14_2026_TT-BCT.txt
+    law_id: 14/2026/TT-BCT
+    law_name: 14/2026/TT-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/14_2026_TT-BGDĐT.txt
+    law_id: 14/2026/TT-BGDĐT
+    law_name: 14/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/14_2026_TT-BTC.txt
+    law_id: 14/2026/TT-BTC
+    law_name: 14/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/14_2026_TT-NHNN.txt
+    law_id: 14/2026/TT-NHNN
+    law_name: 14/2026/TT-NHNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/15_2026_QĐ-TTg.txt
+    law_id: 15/2026/QĐ-TTg
+    law_name: 15/2026/QĐ-TTg
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/15_2026_TT-BCT.txt
+    law_id: 15/2026/TT-BCT
+    law_name: 15/2026/TT-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/15_2026_TT-BGDĐT.txt
+    law_id: 15/2026/TT-BGDĐT
+    law_name: 15/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/15_2026_TT-BQP.txt
+    law_id: 15/2026/TT-BQP
+    law_name: 15/2026/TT-BQP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/15_2026_TT-BTC.txt
+    law_id: 15/2026/TT-BTC
+    law_name: 15/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/15_2026_TT-NHNN.txt
+    law_id: 15/2026/TT-NHNN
+    law_name: 15/2026/TT-NHNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/168_2025_NĐ-CP.txt
+    law_id: 168/2025/NĐ-CP
+    law_name: 168/2025/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/16_2026_NQ-CP.txt
+    law_id: 16/2026/NQ-CP
+    law_name: 16/2026/NQ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/16_2026_QĐ-TTg.txt
+    law_id: 16/2026/QĐ-TTg
+    law_name: 16/2026/QĐ-TTg
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/16_2026_TT-BCA.txt
+    law_id: 16/2026/TT-BCA
+    law_name: 16/2026/TT-BCA
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/16_2026_TT-BCT.txt
+    law_id: 16/2026/TT-BCT
+    law_name: 16/2026/TT-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/16_2026_TT-BGDĐT.txt
+    law_id: 16/2026/TT-BGDĐT
+    law_name: 16/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/16_2026_TT-BTC.txt
+    law_id: 16/2026/TT-BTC
+    law_name: 16/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/16_2026_TT-NHNN.txt
+    law_id: 16/2026/TT-NHNN
+    law_name: 16/2026/TT-NHNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/177_2026_NĐ-CP.txt
+    law_id: 177/2026/NĐ-CP
+    law_name: 177/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/178_2026_NĐ-CP.txt
+    law_id: 178/2026/NĐ-CP
+    law_name: 178/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/17_2026_TT-BCT.txt
+    law_id: 17/2026/TT-BCT
+    law_name: 17/2026/TT-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/17_2026_TT-BGDĐT.txt
+    law_id: 17/2026/TT-BGDĐT
+    law_name: 17/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/17_2026_TT-BQP.txt
+    law_id: 17/2026/TT-BQP
+    law_name: 17/2026/TT-BQP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/181_2026_NĐ-CP.txt
+    law_id: 181/2026/NĐ-CP
+    law_name: 181/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/181_2026_NĐ-CP_.txt
+    law_id: 181/2026/NĐ-CP/
+    law_name: 181/2026/NĐ-CP/
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/185_2026_NĐ-CP.txt
+    law_id: 185/2026/NĐ-CP
+    law_name: 185/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/187_2026_NĐ-CP.txt
+    law_id: 187/2026/NĐ-CP
+    law_name: 187/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/18_2026_TT-BCT.txt
+    law_id: 18/2026/TT-BCT
+    law_name: 18/2026/TT-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/18_2026_TT-BGDĐT.txt
+    law_id: 18/2026/TT-BGDĐT
+    law_name: 18/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/18_2026_TT-BTC.txt
+    law_id: 18/2026/TT-BTC
+    law_name: 18/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/18_2026_TT-NHNN.txt
+    law_id: 18/2026/TT-NHNN
+    law_name: 18/2026/TT-NHNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/196_2026_NĐ-CP.txt
+    law_id: 196/2026/NĐ-CP
+    law_name: 196/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/199_2026_NĐ-CP.txt
+    law_id: 199/2026/NĐ-CP
+    law_name: 199/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/19_2026_NQ-CP.txt
+    law_id: 19/2026/NQ-CP
+    law_name: 19/2026/NQ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/19_2026_QH16.txt
+    law_id: 19/2026/QH16
+    law_name: 19/2026/QH16
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/19_2026_TT-BGDĐT.txt
+    law_id: 19/2026/TT-BGDĐT
+    law_name: 19/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/19_2026_TT-BTC.txt
+    law_id: 19/2026/TT-BTC
+    law_name: 19/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/200_2026_NĐ-CP.txt
+    law_id: 200/2026/NĐ-CP
+    law_name: 200/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/201_2026_NĐ-CP.txt
+    law_id: 201/2026/NĐ-CP
+    law_name: 201/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/202_2026_NĐ-CP.txt
+    law_id: 202/2026/NĐ-CP
+    law_name: 202/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/20_2026_QĐ-TTg.txt
+    law_id: 20/2026/QĐ-TTg
+    law_name: 20/2026/QĐ-TTg
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/20_2026_TT-BCA.txt
+    law_id: 20/2026/TT-BCA
+    law_name: 20/2026/TT-BCA
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/20_2026_TT-BCT.txt
+    law_id: 20/2026/TT-BCT
+    law_name: 20/2026/TT-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/20_2026_TT-BQP.txt
+    law_id: 20/2026/TT-BQP
+    law_name: 20/2026/TT-BQP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/20_2026_TT-BTC.txt
+    law_id: 20/2026/TT-BTC
+    law_name: 20/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/21_2026_NQ-CP.txt
+    law_id: 21/2026/NQ-CP
+    law_name: 21/2026/NQ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/21_2026_TT-BCT.txt
+    law_id: 21/2026/TT-BCT
+    law_name: 21/2026/TT-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/21_2026_TT-BGDĐT.txt
+    law_id: 21/2026/TT-BGDĐT
+    law_name: 21/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/21_2026_TT-BKHCN.txt
+    law_id: 21/2026/TT-BKHCN
+    law_name: 21/2026/TT-BKHCN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/21_2026_TT-BTC.txt
+    law_id: 21/2026/TT-BTC
+    law_name: 21/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/21_2026_TT-NHNN.txt
+    law_id: 21/2026/TT-NHNN
+    law_name: 21/2026/TT-NHNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/22_2026_QĐ-TTg.txt
+    law_id: 22/2026/QĐ-TTg
+    law_name: 22/2026/QĐ-TTg
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/22_2026_TT-BCT.txt
+    law_id: 22/2026/TT-BCT
+    law_name: 22/2026/TT-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/22_2026_TT-BGDĐT.txt
+    law_id: 22/2026/TT-BGDĐT
+    law_name: 22/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/22_2026_TT-BKHCN.txt
+    law_id: 22/2026/TT-BKHCN
+    law_name: 22/2026/TT-BKHCN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/22_2026_TT-BQP.txt
+    law_id: 22/2026/TT-BQP
+    law_name: 22/2026/TT-BQP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/22_2026_TT-BTC.txt
+    law_id: 22/2026/TT-BTC
+    law_name: 22/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/22_2026_TT-NHNN.txt
+    law_id: 22/2026/TT-NHNN
+    law_name: 22/2026/TT-NHNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/23_2026_TT-BCA.txt
+    law_id: 23/2026/TT-BCA
+    law_name: 23/2026/TT-BCA
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/23_2026_TT-BCT.txt
+    law_id: 23/2026/TT-BCT
+    law_name: 23/2026/TT-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/23_2026_TT-BGDĐT.txt
+    law_id: 23/2026/TT-BGDĐT
+    law_name: 23/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/23_2026_TT-NHNN.txt
+    law_id: 23/2026/TT-NHNN
+    law_name: 23/2026/TT-NHNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/24_2026_NQ-CP.txt
+    law_id: 24/2026/NQ-CP
+    law_name: 24/2026/NQ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/24_2026_TT-BGDĐT.txt
+    law_id: 24/2026/TT-BGDĐT
+    law_name: 24/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/24_2026_TT-BKHCN.txt
+    law_id: 24/2026/TT-BKHCN
+    law_name: 24/2026/TT-BKHCN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/24_2026_TT-NHNN.txt
+    law_id: 24/2026/TT-NHNN
+    law_name: 24/2026/TT-NHNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/257_2025_NĐ-CP.txt
+    law_id: 257/2025/NĐ-CP
+    law_name: 257/2025/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/25_2026_NQ-CP.txt
+    law_id: 25/2026/NQ-CP
+    law_name: 25/2026/NQ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/25_2026_QĐ-TTg.txt
+    law_id: 25/2026/QĐ-TTg
+    law_name: 25/2026/QĐ-TTg
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/25_2026_TT-BGDĐT.txt
+    law_id: 25/2026/TT-BGDĐT
+    law_name: 25/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/25_2026_TT-BTC.txt
+    law_id: 25/2026/TT-BTC
+    law_name: 25/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/26_2026_TT-BCT.txt
+    law_id: 26/2026/TT-BCT
+    law_name: 26/2026/TT-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/26_2026_TT-BGDĐT.txt
+    law_id: 26/2026/TT-BGDĐT
+    law_name: 26/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/26_2026_TT-BTC.txt
+    law_id: 26/2026/TT-BTC
+    law_name: 26/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/27_2026_TT-BTC.txt
+    law_id: 27/2026/TT-BTC
+    law_name: 27/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/28_2026_NĐ-CP.txt
+    law_id: 28/2026/NĐ-CP
+    law_name: 28/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/28_2026_QH16.txt
+    law_id: 28/2026/QH16
+    law_name: 28/2026/QH16
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/28_2026_TT-BTC.txt
+    law_id: 28/2026/TT-BTC
+    law_name: 28/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/29_2026_NĐ-CP.txt
+    law_id: 29/2026/NĐ-CP
+    law_name: 29/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/29_2026_TT-BCA.txt
+    law_id: 29/2026/TT-BCA
+    law_name: 29/2026/TT-BCA
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/29_2026_TT-BGDĐT.txt
+    law_id: 29/2026/TT-BGDĐT
+    law_name: 29/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/29_2026_TT-BTC.txt
+    law_id: 29/2026/TT-BTC
+    law_name: 29/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/2_2026_TT-NHNN.txt
+    law_id: 2/2026/TT-NHNN
+    law_name: 2/2026/TT-NHNN
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/30_2026_NĐ-CP.txt
+    law_id: 30/2026/NĐ-CP
+    law_name: 30/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/30_2026_QĐ-TTg.txt
+    law_id: 30/2026/QĐ-TTg
+    law_name: 30/2026/QĐ-TTg
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/30_2026_TT-BCT.txt
+    law_id: 30/2026/TT-BCT
+    law_name: 30/2026/TT-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/30_2026_TT-BGDĐT.txt
+    law_id: 30/2026/TT-BGDĐT
+    law_name: 30/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/30_2026_TT-BTC.txt
+    law_id: 30/2026/TT-BTC
+    law_name: 30/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/31_2026_NĐ-CP.txt
+    law_id: 31/2026/NĐ-CP
+    law_name: 31/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/31_2026_TT-BCT.txt
+    law_id: 31/2026/TT-BCT
+    law_name: 31/2026/TT-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/31_2026_TT-BGDĐT.txt
+    law_id: 31/2026/TT-BGDĐT
+    law_name: 31/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/31_2026_TT-BTC.txt
+    law_id: 31/2026/TT-BTC
+    law_name: 31/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/32_2026_TT-BGĐDT.txt
+    law_id: 32/2026/TT-BGĐDT
+    law_name: 32/2026/TT-BGĐDT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/32_2026_TT-BQP.txt
+    law_id: 32/2026/TT-BQP
+    law_name: 32/2026/TT-BQP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/32_2026_TT-BTC.txt
+    law_id: 32/2026/TT-BTC
+    law_name: 32/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/33_2026_TT-BCA.txt
+    law_id: 33/2026/TT-BCA
+    law_name: 33/2026/TT-BCA
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/33_2026_TT-BGDĐT.txt
+    law_id: 33/2026/TT-BGDĐT
+    law_name: 33/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/34_2026_NĐ-CP.txt
+    law_id: 34/2026/NĐ-CP
+    law_name: 34/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/34_2026_TT-BGDĐT.txt
+    law_id: 34/2026/TT-BGDĐT
+    law_name: 34/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/34_2026_TT-BTC.txt
+    law_id: 34/2026/TT-BTC
+    law_name: 34/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/35_2026_NĐ-CP.txt
+    law_id: 35/2026/NĐ-CP
+    law_name: 35/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/35_2026_TT-BCA.txt
+    law_id: 35/2026/TT-BCA
+    law_name: 35/2026/TT-BCA
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/35_2026_TT-BGDĐT.txt
+    law_id: 35/2026/TT-BGDĐT
+    law_name: 35/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/35_2026_TT-BTC.txt
+    law_id: 35/2026/TT-BTC
+    law_name: 35/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/36_2026_TT-BGDĐT.txt
+    law_id: 36/2026/TT-BGDĐT
+    law_name: 36/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/36_2026_TT-BTC.txt
+    law_id: 36/2026/TT-BTC
+    law_name: 36/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/37_2026_TT-BCA.txt
+    law_id: 37/2026/TT-BCA
+    law_name: 37/2026/TT-BCA
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/37_2026_TT-BGDĐT.txt
+    law_id: 37/2026/TT-BGDĐT
+    law_name: 37/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/38_2026_TT-BGDĐT.txt
+    law_id: 38/2026/TT-BGDĐT
+    law_name: 38/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/39_2026_NĐ-CP.txt
+    law_id: 39/2026/NĐ-CP
+    law_name: 39/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/39_2026_TT-BCA.txt
+    law_id: 39/2026/TT-BCA
+    law_name: 39/2026/TT-BCA
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/39_2026_TT-BGDĐT.txt
+    law_id: 39/2026/TT-BGDĐT
+    law_name: 39/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/39_2026_TT-BTC.txt
+    law_id: 39/2026/TT-BTC
+    law_name: 39/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/41_2026_TT-BTC.txt
+    law_id: 41/2026/TT-BTC
+    law_name: 41/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/42_2026_NĐ-CP.txt
+    law_id: 42/2026/NĐ-CP
+    law_name: 42/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/42_2026_TT-BCA.txt
+    law_id: 42/2026/TT-BCA
+    law_name: 42/2026/TT-BCA
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/42_2026_TT-BGDĐT.txt
+    law_id: 42/2026/TT-BGDĐT
+    law_name: 42/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/42_2026_TT-BTC.txt
+    law_id: 42/2026/TT-BTC
+    law_name: 42/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/43_2026_NĐ-CP.txt
+    law_id: 43/2026/NĐ-CP
+    law_name: 43/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/43_2026_TT-BTC.txt
+    law_id: 43/2026/TT-BTC
+    law_name: 43/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/44_2026_TT-BGDĐT.txt
+    law_id: 44/2026/TT-BGDĐT
+    law_name: 44/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/44_2026_TT-BTC.txt
+    law_id: 44/2026/TT-BTC
+    law_name: 44/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/45_2026_TT-BGDĐT.txt
+    law_id: 45/2026/TT-BGDĐT
+    law_name: 45/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/45_2026_TT-BTC.txt
+    law_id: 45/2026/TT-BTC
+    law_name: 45/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/46_2026_TT-BGDĐT.txt
+    law_id: 46/2026/TT-BGDĐT
+    law_name: 46/2026/TT-BGDĐT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/46_2026_TT-BTC.txt
+    law_id: 46/2026/TT-BTC
+    law_name: 46/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/47_2026_NĐ-CP.txt
+    law_id: 47/2026/NĐ-CP
+    law_name: 47/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/47_2026_TT-BTC.txt
+    law_id: 47/2026/TT-BTC
+    law_name: 47/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/48_2026_NĐ-CP.txt
+    law_id: 48/2026/NĐ-CP
+    law_name: 48/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/48_2026_TT-BTC.txt
+    law_id: 48/2026/TT-BTC
+    law_name: 48/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/49_2026_NĐ-CP.txt
+    law_id: 49/2026/NĐ-CP
+    law_name: 49/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/50_2026_NĐ-CP.txt
+    law_id: 50/2026/NĐ-CP
+    law_name: 50/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/50_2026_TT-BTC.txt
+    law_id: 50/2026/TT-BTC
+    law_name: 50/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/51_2026_NĐ-CP.txt
+    law_id: 51/2026/NĐ-CP
+    law_name: 51/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/51_2026_TT-BTC.txt
+    law_id: 51/2026/TT-BTC
+    law_name: 51/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/52_2026_NĐ-CP.txt
+    law_id: 52/2026/NĐ-CP
+    law_name: 52/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/52_2026_TT-BTC.txt
+    law_id: 52/2026/TT-BTC
+    law_name: 52/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/54_2026_NĐ-CP.txt
+    law_id: 54/2026/NĐ-CP
+    law_name: 54/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/54_2026_TT-BTC.txt
+    law_id: 54/2026/TT-BTC
+    law_name: 54/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/55_2026_NĐ-CP.txt
+    law_id: 55/2026/NĐ-CP
+    law_name: 55/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/55_2026_TT-BTC.txt
+    law_id: 55/2026/TT-BTC
+    law_name: 55/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/56_2026_NĐ-CP.txt
+    law_id: 56/2026/NĐ-CP
+    law_name: 56/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/57_2026_NĐ-CP.txt
+    law_id: 57/2026/NĐ-CP
+    law_name: 57/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/57_2026_TT-BTC.txt
+    law_id: 57/2026/TT-BTC
+    law_name: 57/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/58_2026_NĐ-CP.txt
+    law_id: 58/2026/NĐ-CP
+    law_name: 58/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/58_2026_TT-BTC.txt
+    law_id: 58/2026/TT-BTC
+    law_name: 58/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/59_2026_NĐ-CP.txt
+    law_id: 59/2026/NĐ-CP
+    law_name: 59/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/59_2026_TT-BTC.txt
+    law_id: 59/2026/TT-BTC
+    law_name: 59/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/60_2026_NĐ-CP.txt
+    law_id: 60/2026/NĐ-CP
+    law_name: 60/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/60_2026_TT-BTC.txt
+    law_id: 60/2026/TT-BTC
+    law_name: 60/2026/TT-BTC
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/61_2026_NĐ-CP.txt
+    law_id: 61/2026/NĐ-CP
+    law_name: 61/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/62_2026_NĐ-CP.txt
+    law_id: 62/2026/NĐ-CP
+    law_name: 62/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/62_2026_TT-BCA.txt
+    law_id: 62/2026/TT-BCA
+    law_name: 62/2026/TT-BCA
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/64_2026_NĐ-CP.txt
+    law_id: 64/2026/NĐ-CP
+    law_name: 64/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/65_2026_NĐ-CP.txt
+    law_id: 65/2026/NĐ-CP
+    law_name: 65/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/66_2026_NĐ-CP.txt
+    law_id: 66/2026/NĐ-CP
+    law_name: 66/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/67_2026_NĐ-CP.txt
+    law_id: 67/2026/NĐ-CP
+    law_name: 67/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/67_2026_TT-BCA.txt
+    law_id: 67/2026/TT-BCA
+    law_name: 67/2026/TT-BCA
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/68_2026_NĐ-CP.txt
+    law_id: 68/2026/NĐ-CP
+    law_name: 68/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/69_2026_NĐ-CP.txt
+    law_id: 69/2026/NĐ-CP
+    law_name: 69/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/70_2026_NĐ-CP.txt
+    law_id: 70/2026/NĐ-CP
+    law_name: 70/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/72_2026_NĐ-CP.txt
+    law_id: 72/2026/NĐ-CP
+    law_name: 72/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/73_2026_NĐ-CP.txt
+    law_id: 73/2026/NĐ-CP
+    law_name: 73/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/74_2026_NĐ-CP.txt
+    law_id: 74/2026/NĐ-CP
+    law_name: 74/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/76_2026_NĐ-CP.txt
+    law_id: 76/2026/NĐ-CP
+    law_name: 76/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/78_2026_NĐ-CP.txt
+    law_id: 78/2026/NĐ-CP
+    law_name: 78/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/79_2026_NĐ-CP.txt
+    law_id: 79/2026/NĐ-CP
+    law_name: 79/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/80_2023_NĐ-CP.txt
+    law_id: 80/2023/NĐ-CP
+    law_name: 80/2023/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/80_2026_NĐ-CP.txt
+    law_id: 80/2026/NĐ-CP
+    law_name: 80/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/82_2026_NĐ-CP.txt
+    law_id: 82/2026/NĐ-CP
+    law_name: 82/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/83_2026_NĐ-CP.txt
+    law_id: 83/2026/NĐ-CP
+    law_name: 83/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/84_2026_NĐ-CP.txt
+    law_id: 84/2026/NĐ-CP
+    law_name: 84/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/85_2026_NĐ-CP.txt
+    law_id: 85/2026/NĐ-CP
+    law_name: 85/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/86_2026_NĐ-CP.txt
+    law_id: 86/2026/NĐ-CP
+    law_name: 86/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/87_2026_NĐ-CP.txt
+    law_id: 87/2026/NĐ-CP
+    law_name: 87/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/87_2026_TT-BCA.txt
+    law_id: 87/2026/TT-BCA
+    law_name: 87/2026/TT-BCA
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/88_2026_NĐ-CP.txt
+    law_id: 88/2026/NĐ-CP
+    law_name: 88/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/906_QĐ-BCT.txt
+    law_id: 906/QĐ-BCT
+    law_name: 906/QĐ-BCT
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/91_2026_NĐ-CP.txt
+    law_id: 91/2026/NĐ-CP
+    law_name: 91/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/92_2026_NĐ-CP.txt
+    law_id: 92/2026/NĐ-CP
+    law_name: 92/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/93_2026_NĐ-CP.txt
+    law_id: 93/2026/NĐ-CP
+    law_name: 93/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/95_2026_NĐ-CP.txt
+    law_id: 95/2026/NĐ-CP
+    law_name: 95/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/96_2026_NĐ-CP.txt
+    law_id: 96/2026/NĐ-CP
+    law_name: 96/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/97_2026_NĐ-CP.txt
+    law_id: 97/2026/NĐ-CP
+    law_name: 97/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/98_2026_NĐ-CP.txt
+    law_id: 98/2026/NĐ-CP
+    law_name: 98/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
+    source_url: ""
+    status: active
+
+  - path: data/raw/vbpl_update/99_2026_NĐ-CP.txt
+    law_id: 99/2026/NĐ-CP
+    law_name: 99/2026/NĐ-CP
+    document_type: other
+    issued_date: ""
+    effective_date: ""
     source_url: ""
     status: active

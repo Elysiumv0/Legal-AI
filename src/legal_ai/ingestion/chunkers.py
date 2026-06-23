@@ -2,7 +2,7 @@ import re
 import json
 from pathlib import Path
 from legal_ai.ingestion.metadata import build_metadata, extract_structure, enrich_chunks
-MAX_CHARS = 800   
+MAX_CHARS = 6000   
 MIN_CHARS = 100  
 def split(content: str) -> list[str]:
     pattern = r'(?=^\d+\.\s)'
@@ -28,45 +28,20 @@ def chunk_article(article: dict, max_chars: int = MAX_CHARS) -> list[dict]:
     content = article["content"]
     header  = article["header"]
     full_id = article["full_id"]
-    if len(content) <= max_chars:
-        return [{
-            "chunk_id": f"{full_id}|khoản_0",
-            "text": content,
-            "law_id": article["law_id"],
-            "law_name": article["law_name"],
-            "article_id": article["article_id"],
-            "header": header,
-            "full_id": full_id,
-            "khoan": None,
-        }]
-    khoans = split(content)
-    if len(khoans) <= 1:
+    text = f"{article['law_name']} - {header}\n{content}"
+    if len(text) > max_chars:
         return sliding_window(article, max_chars)
-    khoans = merge(khoans)
-    chunks = []
-    for i, khoan_text in enumerate(khoans):
-        khoan_num = re.match(r'^(\d+)\.', khoan_text)
-        khoan_label = f"khoản_{khoan_num.group(1)}" if khoan_num else f"khoản_{i}"
-        text_with_context = f"{header}\n{khoan_text}"
-        if len(text_with_context) > max_chars:
-            sub_article = {**article, "content": text_with_context, "header": header}
-            sub_chunks = sliding_window(sub_article, max_chars)
-            for j, sc in enumerate(sub_chunks):
-                sc["chunk_id"] = f"{full_id}|{khoan_label}_w{j}"
-                sc["khoan"] = khoan_label
-            chunks.extend(sub_chunks)
-        else:
-            chunks.append({
-                "chunk_id": f"{full_id}|{khoan_label}",
-                "text": text_with_context,
-                "law_id": article["law_id"],
-                "law_name": article["law_name"],
-                "article_id": article["article_id"],
-                "header": header,
-                "full_id": full_id,
-                "khoan": khoan_label,
-            })
-    return chunks
+    return [{
+        "chunk_id": f"{full_id}",
+        "text": text,
+        "law_id": article["law_id"],
+        "law_name": article["law_name"],
+        "article_id": article["article_id"],
+        "header": header,
+        "full_id": full_id,
+        "khoan": None,
+    }]
+
 
 def sliding_window(article: dict, max_chars: int = MAX_CHARS, overlap: int = 100) -> list[dict]:
     content = article["content"]

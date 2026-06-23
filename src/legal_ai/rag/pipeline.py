@@ -53,24 +53,16 @@ class StandardRAGPipeline:
 
     def _router_signals(self, answer: str, chunks: list[dict]) -> bool:
         """Return True nếu cần fallback sang Agent."""
-        # Signal 1: RAG tự nhận bó tay
         answer_lower = answer.lower()
         is_clueless = any(kw in answer_lower for kw in RAG_BLIND_KEYWORDS)
-
-        # Signal 2: Cosine score gốc thấp (từ rrf_score hoặc score)
         top_score = chunks[0].get("score", chunks[0].get("rrf_score", 1.0)) if chunks else 1.0
         low_score = top_score < SCORE_THRESHOLD
-
-        # Signal 3: Không có citation Điều/Khoản/Chương/Nghị định
         no_citation = not re.search(
             r'(Điều|Khoản|Chương|Mục|Nghị định|Thông tư)\s+\d+',
             answer, re.IGNORECASE
         )
-
-        # Signal 4: Chunk ít nội dung hữu ích
         useful = [c for c in chunks[:3] if len(c.get("text", "")) >= MIN_CHUNK_LEN]
         too_sparse = len(useful) < 2
-
         return is_clueless or low_score or no_citation or too_sparse
 
     def run(self, question: str) -> RAGResult:
@@ -95,7 +87,6 @@ class StandardRAGPipeline:
 def build_pipeline(config_path: str = "configs/settings.yaml") -> StandardRAGPipeline:
     from src.legal_ai.config.loader import load_settings
     cfg = load_settings(config_path)
-
     bm25 = BM25Retriever()
     bm25.load(str(cfg.indexes.bm25_path))
     embedder = EmbeddingModel(cfg.models.embedding.name)

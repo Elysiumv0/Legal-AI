@@ -1,7 +1,7 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 MODEL_NAME = "BAAI/bge-reranker-v2-m3"
-MAX_LENGTH = 512
+MAX_LENGTH = 2048
 class Reranker:
     def __init__(self, model_name: str = MODEL_NAME):
         print(f"Loading reranker: {model_name}")
