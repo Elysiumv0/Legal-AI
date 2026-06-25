@@ -1,5 +1,6 @@
 import re
 from dataclasses import dataclass, field
+
 @dataclass
 class LawMetadata:
     law_id:       str
@@ -36,30 +37,84 @@ def extract_structure(full_text_or_articles) -> dict[str, ArticleMetadata]:
     current_chapter_name = None
     current_section      = None
     current_section_name = None
+    
     if isinstance(full_text_or_articles, list):
         raw_text = "\n".join(a.get("content", "") for a in full_text_or_articles)
     else:
         raw_text = full_text_or_articles
+        
     lines = raw_text.split('\n')
-    for line in lines:
-        line = line.strip()
+    i = 0
+    n = len(lines)
+    
+    while i < n:
+        line = lines[i].strip()
         if not line:
+            i += 1
             continue
-        ch = re.match(r'^(Chương\s+[IVXLCDM\d]+)[\.:]?\s*(.*)', line)
+            
+        # 1. Match Chapter
+        ch = re.match(r'^(Chương\s+[IVXLCDM\d]+)[\.:]?\s*(.*)', line, re.IGNORECASE)
         if ch:
-            current_chapter      = ch.group(1).strip()
-            current_chapter_name = ch.group(2).strip() or None
-            current_section      = None
+            current_chapter = ch.group(1).strip()
+            name_part = ch.group(2).strip()
+            
+            lookahead_lines = []
+            if name_part:
+                lookahead_lines.append(name_part)
+                
+            j = i + 1
+            while j < n:
+                next_line = lines[j].strip()
+                if not next_line:
+                    j += 1
+                    continue
+                # Stop if next line is a structural boundary or clause
+                if (re.match(r'^(Chương|Mục|Điều)\s+', next_line, re.IGNORECASE) or 
+                    re.match(r'^\d+\.\s+', next_line)):
+                    break
+                # Stop if next line is too long (titles are usually short, < 150 chars)
+                if len(next_line) > 150:
+                    break
+                lookahead_lines.append(next_line)
+                j += 1
+            
+            current_chapter_name = " ".join(lookahead_lines).strip() or None
+            current_section = None
             current_section_name = None
+            i = j  # Fast forward to where lookahead stopped
             continue
-
-        sec = re.match(r'^(Mục\s+\d+)[\.:]?\s*(.*)', line)
+            
+        # 2. Match Section
+        sec = re.match(r'^(Mục\s+\d+)[\.:]?\s*(.*)', line, re.IGNORECASE)
         if sec:
-            current_section      = sec.group(1).strip()
-            current_section_name = sec.group(2).strip() or None
+            current_section = sec.group(1).strip()
+            name_part = sec.group(2).strip()
+            
+            lookahead_lines = []
+            if name_part:
+                lookahead_lines.append(name_part)
+                
+            j = i + 1
+            while j < n:
+                next_line = lines[j].strip()
+                if not next_line:
+                    j += 1
+                    continue
+                if (re.match(r'^(Chương|Mục|Điều)\s+', next_line, re.IGNORECASE) or 
+                    re.match(r'^\d+\.\s+', next_line)):
+                    break
+                if len(next_line) > 150:
+                    break
+                lookahead_lines.append(next_line)
+                j += 1
+                
+            current_section_name = " ".join(lookahead_lines).strip() or None
+            i = j
             continue
-
-        art = re.match(r'^(Điều\s+\d+[a-z]?)[\.\:]', line)
+            
+        # 3. Match Article
+        art = re.match(r'^(Điều\s+\d+[a-z]?)[\.\:]', line, re.IGNORECASE)
         if art:
             article_id = art.group(1).strip()
             result[article_id] = ArticleMetadata(
@@ -69,6 +124,9 @@ def extract_structure(full_text_or_articles) -> dict[str, ArticleMetadata]:
                 section=current_section,
                 section_name=current_section_name,
             )
+            
+        i += 1
+        
     return result
 
 def enrich_chunks(

@@ -48,12 +48,20 @@ class HybridRetriever:
             "colbert": colbert_weight,
         }
 
-    def _retrieve_single(self, query: str, each_top_k: int) -> list[list[dict]]:
+    def _retrieve_single(
+        self,
+        query: str,
+        each_top_k: int,
+        law_id_filter: str | None = None,
+    ) -> list[list[dict]]:
         result_lists  = []
         weight_list   = []
         result_lists.append(self.bm25.retrieve(query, top_k=each_top_k))
         weight_list.append(self.weights["bm25"])
-        result_lists.append(self.dense.retrieve(query, top_k=each_top_k))
+        # Pass law_id_filter to dense retriever for Qdrant-level filtering
+        result_lists.append(self.dense.retrieve(
+            query, top_k=each_top_k, law_id_filter=law_id_filter
+        ))
         weight_list.append(self.weights["dense"])
         if self.article:
             result_lists.append(self.article.retrieve(query, top_k=each_top_k // 2))
@@ -69,15 +77,18 @@ class HybridRetriever:
         top_k: int = 20,
         each_top_k: int = 100,
         extra_queries: list[str] | None = None,
+        law_id_filter: str | None = None,
     ) -> list[dict]:
         all_lists   = []
         all_weights = []
-        lists, weights = self._retrieve_single(query, each_top_k)
+        lists, weights = self._retrieve_single(query, each_top_k, law_id_filter)
         all_lists.extend(lists)
         all_weights.extend(weights)
         if extra_queries:
             for eq in extra_queries:
-                lists, weights = self._retrieve_single(eq, each_top_k // 2)
+                lists, weights = self._retrieve_single(
+                    eq, each_top_k // 2, law_id_filter
+                )
                 # giảm weight xuống để không át query gốc
                 all_lists.extend(lists)
                 all_weights.extend([w * 0.7 for w in weights])

@@ -6,7 +6,8 @@ from legal_ai.agents.nodes.drafter import DrafterNode
 from legal_ai.agents.nodes.reviewer import ReviewerNode
 
 from legal_ai.retrieval.sparse.bm25 import BM25Retriever
-from legal_ai.retrieval.dense.retriever import DenseRetriever, VectorStore
+from legal_ai.retrieval.dense.retriever import DenseRetriever
+from legal_ai.retrieval.dense.qdrant_store import VectorStore
 from legal_ai.models.embeddings import EmbeddingModel
 from legal_ai.retrieval.hybrid.fusion import HybridRetriever
 from legal_ai.models.reranker import Reranker
@@ -61,10 +62,16 @@ def build_agent(config: dict):
     reviewer   = ReviewerNode(llm)
     return build_graph(researcher, critic, drafter, reviewer)
 
-def run_agent(graph, question: str, question_id: int = 0) -> dict:
+def run_agent(
+    graph,
+    question: str,
+    question_id: int = 0,
+    entities: dict | None = None,
+) -> dict:
     initial_state = {
         "question":            question,
         "question_id":         question_id,
+        "entities":            entities or {},
         "sub_queries":         [],
         "retrieved_chunks":    [],
         "retrieval_attempts":  0,

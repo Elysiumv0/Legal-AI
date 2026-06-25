@@ -1,11 +1,10 @@
 README.md
 pyproject.toml
+setup.py
 src/legal_ai/__init__.py
 src/legal_ai.egg-info/PKG-INFO
 src/legal_ai.egg-info/SOURCES.txt
 src/legal_ai.egg-info/dependency_links.txt
+src/legal_ai.egg-info/desktop.ini
 src/legal_ai.egg-info/requires.txt
 src/legal_ai.egg-info/top_level.txt
-tests/test_agents.py
-tests/test_colbert.py
-tests/test_parsers.py

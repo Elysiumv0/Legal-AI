@@ -1,3 +1,4 @@
+import hashlib
 import numpy as np
 from pathlib import Path
 from tqdm import tqdm
@@ -15,7 +16,19 @@ from legal_ai.models.embeddings import EmbeddingModel
 CHUNK_COLLECTION   = "legal_chunks"
 ARTICLE_COLLECTION = "legal_articles"
 QDRANT_PATH        = "data/indexes/qdrant"
-BATCH_SIZE         = 8
+BATCH_SIZE         = 256
+
+
+def _stable_point_id(chunk_id: str) -> int:
+    """Tạo point ID ổn định từ chunk_id bằng hash.
+    
+    Dùng hash thay vì sequential index (i+j) để:
+    - Tránh ghi đè chunk cũ khi re-index (incremental)
+    - Đảm bảo idempotent: cùng chunk_id luôn cùng point ID
+    - Qdrant dùng unsigned 64-bit int cho ID
+    """
+    h = hashlib.sha256(chunk_id.encode('utf-8')).hexdigest()
+    return int(h[:16], 16)  # 64-bit int từ 16 hex chars
 
 
 class VectorStore:
@@ -51,6 +64,8 @@ class VectorStore:
         collection_name: str = CHUNK_COLLECTION,
         batch_size: int = BATCH_SIZE,
     ):
+        import torch
+        use_cuda = torch.cuda.is_available()
         total = len(chunks)
         print(f"Indexing {total} docs vào '{collection_name}'...")
         for i in tqdm(range(0, total, batch_size)):
@@ -59,7 +74,7 @@ class VectorStore:
             vectors = embedder.encode(texts, is_query=False)
             points  = [
                 PointStruct(
-                    id=i + j,
+                    id=_stable_point_id(chunk["chunk_id"]),
                     vector=vectors[j].tolist(),
                     payload={
                         "chunk_id":        chunk["chunk_id"],
@@ -81,6 +96,14 @@ class VectorStore:
                 for j, chunk in enumerate(batch)
             ]
             self.client.upsert(collection_name=collection_name, points=points)
+            
+            # Clear CUDA cache every 3 batches (768 chunks) to prevent VRAM paging on 6GB GPUs
+            if use_cuda and (i // batch_size) % 3 == 0:
+                torch.cuda.empty_cache()
+                
+        # Final cache flush
+        if use_cuda:
+            torch.cuda.empty_cache()
         print(f"Indexed {total} docs vào '{collection_name}'")
 
     def search(
@@ -89,24 +112,42 @@ class VectorStore:
         top_k: int = 20,
         collection_name: str = CHUNK_COLLECTION,
         law_id_filter: str | None = None,
+        exclude_expired: bool = True,
     ) -> list[dict]:
-        query_filter = None
+        """Tìm kiếm vector tầm gần (cosine similarity).
+        
+        Args:
+            query_vector: Vector truy vấn.
+            top_k: Số lượng kết quả tối đa.
+            collection_name: Tên collection.
+            law_id_filter: Lọc theo law_id cụ thể.
+            exclude_expired: Nếu True, loại bỏ văn bản hết hiệu lực
+                ("Hết hiệu lực") khỏi kết quả — tránh trích dẫn
+                văn bản cũ. Chỉ tắt nếu user hỏi cụ thể về văn bản cũ.
+        """
+        must_conditions = []
         if law_id_filter:
-            query_filter = Filter(
-                must=[FieldCondition(
-                    key="law_id",
-                    match=MatchValue(value=law_id_filter),
-                )]
+            must_conditions.append(
+                FieldCondition(key="law_id", match=MatchValue(value=law_id_filter))
             )
+        # Không cần must_not cho status vì Qdrant local (file-based) không hỗ trợ
+        # must_not filter tốt — thay vào đó filter ở tầng Python bên dưới.
+        
+        query_filter = Filter(must=must_conditions) if must_conditions else None
         response = self.client.query_points(
             collection_name=collection_name,
             query=query_vector.tolist(),
-            limit=top_k,
+            limit=top_k * 2 if exclude_expired else top_k,  # Fetch thêm để bù phần bị loại
             query_filter=query_filter,
             with_payload=True,
         )
-        return [
-            {
+        results = []
+        for idx, r in enumerate(response.points):
+            status = r.payload.get("status", "")
+            # Loại bỏ văn bản hết hiệu lực nếu exclude_expired=True
+            if exclude_expired and status and "hết hiệu lực" in status.lower():
+                continue
+            results.append({
                 "chunk_id":       r.payload["chunk_id"],
                 "text":           r.payload["text"],
                 "law_id":         r.payload["law_id"],
@@ -119,7 +160,8 @@ class VectorStore:
                 "status":         r.payload.get("status"),
                 "context_prefix": r.payload.get("context_prefix"),
                 "score":          r.score,
-                "rank":           i + 1,
-            }
-            for i, r in enumerate(response.points)
-        ]
+                "rank":           len(results) + 1,
+            })
+            if len(results) >= top_k:
+                break
+        return results

@@ -24,6 +24,15 @@ def merge(khoans: list[str], min_chars: int = MIN_CHARS) -> list[str]:
             merged.append(buffer)
     return merged
 
+def extract_khoan_numbers(text: str) -> str:
+    """Extract Vietnamese clauses (Khoản) from chunk text."""
+    import re
+    matches = re.findall(r'^\d+(?=\.\s)', text, re.MULTILINE)
+    if matches:
+        nums = sorted(list(set(int(m) for m in matches)))
+        return ", ".join(f"Khoản {n}" for n in nums)
+    return None
+
 def chunk_article(article: dict, max_chars: int = MAX_CHARS) -> list[dict]:
     content = article["content"]
     header  = article["header"]
@@ -39,7 +48,7 @@ def chunk_article(article: dict, max_chars: int = MAX_CHARS) -> list[dict]:
         "article_id": article["article_id"],
         "header": header,
         "full_id": full_id,
-        "khoan": None,
+        "khoan": extract_khoan_numbers(text),
     }]
 
 
@@ -65,7 +74,7 @@ def sliding_window(article: dict, max_chars: int = MAX_CHARS, overlap: int = 100
                 "article_id": article["article_id"],
                 "header": article["header"],
                 "full_id": full_id,
-                "khoan": None,
+                "khoan": extract_khoan_numbers(chunk_text),
             })
         start = end - overlap
         i += 1

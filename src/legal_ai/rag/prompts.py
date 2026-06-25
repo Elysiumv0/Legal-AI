@@ -30,6 +30,7 @@ Nếu câu hỏi đã đơn giản, chỉ trả về câu hỏi gốc.
 Trả về JSON:
 {{"sub_queries": ["câu hỏi 1", "câu hỏi 2", ...]}}
 
+{entity_context}
 Câu hỏi: {question}"""
 
 

@@ -2,6 +2,7 @@ import json
 import re
 from legal_ai.agents.state import AgentState
 from legal_ai.models.llm import LLMClient
+from legal_ai.utils.json_utils import parse_json, build_context
 MAX_RETRIEVAL_ATTEMPTS = 3
 
 CRITIC_PROMPT = """Bạn là chuyên gia pháp lý đánh giá chất lượng thông tin.
@@ -18,19 +19,6 @@ Trả về JSON:
   "feedback": "lý do nếu chưa đủ, hoặc ok nếu đủ",
   "missing": "thông tin còn thiếu nếu có"
 }}"""
-
-def build_context(chunks: list[dict]) -> str:
-    return "\n\n---\n\n".join(
-        f"[{i}] {c['full_id']}\n{c['text']}"
-        for i, c in enumerate(chunks, 1)
-    )
-
-def parse_json(text: str) -> dict:
-    text = re.sub(r"```json|```", "", text).strip()
-    try:
-        return json.loads(text)
-    except json.JSONDecodeError:
-        return {}
 
 class CriticNode:
     def __init__(self, llm: LLMClient):

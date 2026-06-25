@@ -1,8 +1,12 @@
-from typing import TypedDict, Annotated
+from typing import TypedDict, Annotated, Any
 import operator
+
 class AgentState(TypedDict):
     question:       str             
-    question_id:    int | None     
+    question_id:    int | None      
+
+    # ── NER entities từ enriched data ──
+    entities:       dict[str, Any]   # law_ids, legal_actions, legal_objects, penalties, primary_law_id, ...
 
     sub_queries:    list[str]        
     retrieved_chunks: list[dict]    

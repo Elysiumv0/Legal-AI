@@ -28,10 +28,25 @@ class LegalRetriever:
         self,
         query: str,
         top_k: int = 15,
-        max_kg_hops: int = 1
+        max_kg_hops: int = 1,
+        entities: Dict[str, Any] | None = None,
     ) -> List[Dict[str, Any]]:
-        domain = self.ontology.get_domain(query)
-        filtered_laws = self._filter_laws_by_domain(domain)
+        # Ưu tiên NER entities nếu có law_ids
+        filtered_laws = None
+        if entities:
+            # Dùng law_ids từ NER — chính xác hơn domain keyword matching
+            law_ids = entities.get('law_ids', [])
+            primary = entities.get('primary_law_id')
+            if primary and primary not in law_ids:
+                law_ids = [primary] + law_ids
+            if law_ids:
+                filtered_laws = law_ids
+
+        # Fallback: dùng ontology domain filter nếu NER không có law_ids
+        if filtered_laws is None:
+            domain = self.ontology.get_domain(query)
+            filtered_laws = self._filter_laws_by_domain(domain)
+
         hybrid_results = self._hybrid_retrieval(query, filtered_laws, top_k * 2)
         expanded_results = self._expand_via_kg(hybrid_results, max_kg_hops)
         reranked_results = self.reranker.rerank(

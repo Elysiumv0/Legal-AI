@@ -4,8 +4,9 @@ from typing import Dict, List, Any
 
 from legal_ai.agents.state import AgentState
 from legal_ai.retrieval.legal_rag import LegalRetriever
-from legal_ai.rag.citation_extractor import LegalCitationExtractor, parse_json
+from legal_ai.rag.citation_extractor import LegalCitationExtractor
 from legal_ai.models.llm import LLMClient
+from legal_ai.utils.json_utils import parse_json
 
 
 class LegalSelfRAG:

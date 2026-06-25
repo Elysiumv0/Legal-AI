@@ -3,18 +3,7 @@ import json
 from typing import List, Dict, Tuple, Any
 from legal_ai.models.llm import LLMClient
 from legal_ai.rag.schemas import RAGResult
-def parse_json(text: str) -> dict:
-    text = re.sub(r"```json|```", "", text).strip()
-    try:
-        return json.loads(text)
-    except json.JSONDecodeError:
-        match = re.search(r'\{.*\}', text, re.DOTALL)
-        if match:
-            try:
-                return json.loads(match.group())
-            except json.JSONDecodeError:
-                pass
-        return {}
+from legal_ai.utils.json_utils import parse_json
 
 class LegalCitationExtractor:
     def __init__(

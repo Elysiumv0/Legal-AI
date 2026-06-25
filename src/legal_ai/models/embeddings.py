@@ -29,8 +29,14 @@ class EmbeddingModel:
             self.model = self.model.to(self.device)
         self.model.eval()
 
+    # BGE-M3 instruction prefix for query encoding (improves retrieval ~1-2%)
+    QUERY_PREFIX = "Represent this sentence for searching relevant passages: "
+
     @torch.no_grad()
     def encode(self, texts: list[str], is_query: bool = False) -> np.ndarray:
+        # Prepend BGE instruction prefix for queries
+        if is_query:
+            texts = [self.QUERY_PREFIX + t for t in texts]
         encoded = self.tokenizer(
             texts,
             padding=True,
