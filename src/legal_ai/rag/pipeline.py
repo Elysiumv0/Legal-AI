@@ -11,6 +11,7 @@ from legal_ai.models.llm import LLMClient
 from legal_ai.rag.schemas  import RAGResult
 from legal_ai.rag.citations import build_context, extract_articles
 from legal_ai.rag.prompts   import RAG_PROMPT
+from legal_ai.retrieval.config import TOP_K_FINAL, TOP_K_RETRIEVE
 
 RAG_BLIND_KEYWORDS = [
     "không tìm thấy", "chưa có quy định", "chưa hỗ trợ",
@@ -30,8 +31,8 @@ class StandardRAGPipeline:
         dense_retriever:  DenseRetriever,
         reranker:         Reranker,
         llm:              LLMClient,
-        top_k_retrieve:   int = 20,
-        top_k_rerank:     int = 10,
+        top_k_retrieve:   int = TOP_K_RETRIEVE,
+        top_k_rerank:     int = TOP_K_FINAL,
     ):
         self.hybrid = HybridRetriever(bm25_retriever, dense_retriever)
         self.reranker = reranker
@@ -52,11 +53,22 @@ class StandardRAGPipeline:
         return self.llm.complete(prompt)
 
     def _router_signals(self, answer: str, chunks: list[dict]) -> bool:
-        """Return True nếu cần fallback sang Agent."""
+        """Return True nếu cần fallback sang Agent.
+
+        LƯU Ý về score: trước đây dòng dưới so chunks[0]["score"] — key này
+        là BM25 raw (0-20+) hoặc cosine (0-1) tuỳ nguồn nào surface trước,
+        so với ngưỡng 0.70 thì vô nghĩa. Sau khi retrieve() chạy rerank,
+        chunks[0] luôn mang rerank_score (sigmoid 0-1) — dùng đúng thang đó.
+        """
         answer_lower = answer.lower()
         is_clueless = any(kw in answer_lower for kw in RAG_BLIND_KEYWORDS)
-        top_score = chunks[0].get("score", chunks[0].get("rrf_score", 1.0)) if chunks else 1.0
-        low_score = top_score < SCORE_THRESHOLD
+        top = chunks[0] if chunks else None
+        if top is not None and "rerank_score" in top:
+            low_score = float(top["rerank_score"]) < SCORE_THRESHOLD
+        else:
+            # Chưa qua rerank: không thể so thang BM25/cosine với 0.70,
+            # coi như không có tín hiệu này thay vì đoán.
+            low_score = False
         no_citation = not re.search(
             r'(Điều|Khoản|Chương|Mục|Nghị định|Thông tư)\s+\d+',
             answer, re.IGNORECASE
@@ -68,7 +80,7 @@ class StandardRAGPipeline:
     def run(self, question: str) -> RAGResult:
         chunks = self.retrieve(question)
         top_scores = [
-            c.get("score", c.get("rrf_score", 0.0)) for c in chunks[:3]
+            c.get("rerank_score", c.get("score", 0.0)) for c in chunks[:3]
         ]
         prompt = self.augment(question, chunks)
         answer = self.generate(prompt)
@@ -85,7 +97,7 @@ class StandardRAGPipeline:
         )
 
 def build_pipeline(config_path: str = "configs/settings.yaml") -> StandardRAGPipeline:
-    from src.legal_ai.config.loader import load_settings
+    from legal_ai.config.loader import load_settings  # không "from src.legal_ai"
     cfg = load_settings(config_path)
     bm25 = BM25Retriever()
     bm25.load(str(cfg.indexes.bm25_path))

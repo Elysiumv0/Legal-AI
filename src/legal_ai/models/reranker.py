@@ -1,16 +1,21 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from legal_ai.retrieval.config import RERANK_BATCH_SIZE, TOP_K_FINAL
 MODEL_NAME = "BAAI/bge-reranker-v2-m3"
 MAX_LENGTH = 2048
 class Reranker:
-    def __init__(self, model_name: str = MODEL_NAME):
+    def __init__(self, model_name: str = MODEL_NAME, max_length: int = MAX_LENGTH):
         print(f"Loading reranker: {model_name}")
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.max_length = max_length
+        # fp16 chi chay duoc tren CUDA. Tren CPU, forward pass o day tung raise
+        # "addmm_impl_cpu_ not implemented for Half" vi dong duoi hardcode fp16.
+        # Gio chon dtype theo device, giong pattern cua embeddings.py.
         self.model = AutoModelForSequenceClassification.from_pretrained(
             model_name,
-            torch_dtype=torch.float16,
+            torch_dtype=torch.float16 if self.device == "cuda" else torch.float32,
         )
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.model = self.model.to(self.device)
         self.model.eval()
     @torch.no_grad()
@@ -20,7 +25,7 @@ class Reranker:
             pairs,
             padding=True,
             truncation=True,
-            max_length=MAX_LENGTH,
+            max_length=self.max_length,
             return_tensors="pt"
         ).to(self.device)
         logits = self.model(**encoded).logits
@@ -33,8 +38,8 @@ class Reranker:
         self,
         query: str,
         chunks: list[dict],
-        top_k: int = 10,
-        batch_size: int = 16,
+        top_k: int = TOP_K_FINAL,
+        batch_size: int = RERANK_BATCH_SIZE,
     ) -> list[dict]:
         all_scores = []
         for i in range(0, len(chunks), batch_size):

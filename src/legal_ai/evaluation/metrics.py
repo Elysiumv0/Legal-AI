@@ -100,15 +100,24 @@ def has_disclaimer(answer: str) -> bool:
 
 
 def citation_coverage(answer: str, expected_articles: list[str]) -> float:
-    """Tỷ lệ điều luật expected được nhắc đến trong answer"""
+    """Tỷ lệ điều luật expected được nhắc đến trong answer
+
+    So khớp trên (law_id, số điều), không chỉ số điều. Trước đây chỉ so "Điều 47"
+    nên answer nhắc Điều 47 của Luật Đất đai cũng được tính là đúng khi expected
+    là Điều 47 của Luật Doanh nghiệp — cross-law false positive.
+    """
     if not expected_articles:
         return 1.0
     mentioned = 0
     for article in expected_articles:
-        # Lấy số điều: "59/2020/QH14|Luật DN|Điều 47" → "47"
-        match = re.search(r'Điều\s+(\d+)', article)
-        if match and re.search(rf'Điều\s+{match.group(1)}', answer):
-            mentioned += 1
+        m = re.search(r'Điều\s+(\d+[a-z]?)', article)
+        if not m:
+            continue
+        num = m.group(1)
+        law = article.split('|')[0] if '|' in article else ''
+        if re.search(rf'Điều\s+{re.escape(num)}\b', answer):
+            if not law or law in answer:
+                mentioned += 1
     return mentioned / len(expected_articles)
 
 
@@ -132,13 +141,14 @@ def print_summary(
     qa_results: list[QAMetrics],
 ):
     macro = macro_f2(retrieval_results)
-    avg_p = sum(r.precision for r in retrieval_results) / len(retrieval_results)
-    avg_r = sum(r.recall    for r in retrieval_results) / len(retrieval_results)
+    avg_p = sum(r.precision for r in retrieval_results) / len(retrieval_results) if retrieval_results else 0.0
+    avg_r = sum(r.recall    for r in retrieval_results) / len(retrieval_results) if retrieval_results else 0.0
 
-    pct_citation   = sum(1 for q in qa_results if q.has_citation)   / len(qa_results) * 100
-    pct_disclaimer = sum(1 for q in qa_results if q.has_disclaimer) / len(qa_results) * 100
-    avg_coverage   = sum(q.citation_correct for q in qa_results)    / len(qa_results)
-    avg_latency    = sum(q.latency_ms for q in qa_results)          / len(qa_results)
+    n_qa = len(qa_results)
+    pct_citation   = sum(1 for q in qa_results if q.has_citation)   / n_qa * 100 if n_qa else 0.0
+    pct_disclaimer = sum(1 for q in qa_results if q.has_disclaimer) / n_qa * 100 if n_qa else 0.0
+    avg_coverage   = sum(q.citation_correct for q in qa_results)    / n_qa if n_qa else 0.0
+    avg_latency    = sum(q.latency_ms for q in qa_results)          / n_qa if n_qa else 0.0
 
     print("=" * 50)
     print("RETRIEVAL")

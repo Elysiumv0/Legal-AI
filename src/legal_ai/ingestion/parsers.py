@@ -1,38 +1,136 @@
 import re
 import json
+import os
+import shutil
 from pathlib import Path
-import pdfplumber
 from legal_ai.ingestion.normalizers import normalize
-from legal_ai.utils.text import has_article_citation
-from legal_ai.config.loader import load_data_sources
+from legal_ai.utils.text import (
+    ARTICLE_HEADING,
+    HEADING_FOLLOWERS_RE,
+    LEADING_JUNK,
+    has_article_citation,
+)
 
-def parse_pdf_ocr(path: str) -> str:
+
+def _resolve_tesseract():
+    """Tìm tesseract.exe + tessdata (vie) dù terminal chưa nạp PATH mới.
+
+    Thứ tự ưu tiên: TESSERACT_CMD env < TESSDATA_PREFIX env < quét đường dẫn
+    cài đặt quen thuộc trên Windows. Chỉ cần làm 1 lần rồi cấu hình cho
+    pytesseract, nên gọi lại nhiều lần không tốn kém.
+    """
+    import pytesseract
+
+    exe = os.environ.get("TESSERACT_CMD") or shutil.which("tesseract")
+    if not exe:
+        for cand in (
+            Path(os.environ.get("LOCALAPPDATA", "")) / "Programs" / "Tesseract-OCR" / "tesseract.exe",
+            Path("C:/Program Files/Tesseract-OCR/tesseract.exe"),
+            Path("C:/Program Files (x86)/Tesseract-OCR/tesseract.exe"),
+        ):
+            if cand and cand.exists():
+                exe = str(cand)
+                break
+    if exe:
+        pytesseract.pytesseract.tesseract_cmd = exe
+
+    if not os.environ.get("TESSDATA_PREFIX"):
+        for cand in (
+            Path(os.environ.get("LOCALAPPDATA", "")) / "tessdata",
+            Path(exe).parent / "tessdata" if exe else None,
+        ):
+            if cand and cand.exists():
+                os.environ["TESSDATA_PREFIX"] = str(cand)
+                break
+    return exe
+
+
+def _resolve_poppler() -> str | None:
+    """Tìm thư mục bin của poppler (chứa pdfinfo/pdftoppm).
+
+    Cùng lý do với _resolve_tesseract: terminal đang mở chưa nạp PATH mới.
+    """
+    exe = shutil.which("pdfinfo") or shutil.which("pdftoppm")
+    if exe:
+        return str(Path(exe).parent)
+    for cand in (
+        Path(os.environ.get("LOCALAPPDATA", "")) / "poppler",
+        Path(os.environ.get("ProgramFiles", "C:/Program Files")) / "poppler",
+        Path("C:/poppler"),
+    ):
+        if cand.exists():
+            hits = sorted(cand.rglob("pdfinfo.exe"))
+            if hits:
+                return str(hits[0].parent)
+    return None
+
+
+def parse_pdf_ocr(path: str, dpi: int = 200) -> str:
     from pdf2image import convert_from_path
     import pytesseract
-    pages = convert_from_path(path, dpi=200)
+
+    _resolve_tesseract()
+    poppler_path = _resolve_poppler()
+    pages = convert_from_path(path, dpi=dpi, poppler_path=poppler_path)
+    # Giu ranh gioi trang = \f. Khong co no, khi OCR miss 1 Dieu thi khong
+    # the biet Dieu do nam o trang nao de re-OCR — gap=2 trong danh sach
+    # heading la dau hieu duy nhat, va no khong cho biet vi tri cu the.
     text = ""
-    for page in pages:
+    for i, page in enumerate(pages, 1):
+        if i > 1:
+            text += "\f"
         text += pytesseract.image_to_string(page, lang="vie") + "\n"
     return text
 
+_SPLIT_RE = re.compile(
+    '^' + LEADING_JUNK + '(' + ARTICLE_HEADING + r'.*?)(?=^' + LEADING_JUNK + ARTICLE_HEADING + r'|\Z)',
+    re.DOTALL | re.MULTILINE,
+)
+
+
 def split_by(text: str) -> list[dict]:
-    pattern = r'(Điều\s+\d+[a-z]?[\.\:]?.*?)(?=Điều\s+\d+[a-z]?[\.\:]?|\Z)'
-    matches = re.findall(pattern, text, re.DOTALL | re.IGNORECASE)
+    matches = _SPLIT_RE.findall(text)
     articles = []
     for match in matches:
         lines = match.strip().split('\n')
         header = lines[0].strip()
-        num = re.search(r'Điều\s+(\d+[a-z]?)', header, re.IGNORECASE)
+        # Cung mot dinh nghia heading voi metadata.extract_structure:
+        # regex nay vua nhan "Dieu 48 Ten dieu", vua loai "Dieu 17 cua Luat nay".
+        num = HEADING_FOLLOWERS_RE.match(header)
         if not num:
             continue
         articles.append({
-            "article_id": f"Điều {num.group(1)}",
+            "article_id": num.group(1).strip(),
             "header": header,
             "content": match.strip()
         })
     return articles
 
+def _read_as_text(path: str) -> str | None:
+    """Phát hiện file .pdf/.txt thực chất là VĂN BẢN (HTML "Save as" từ
+    thuvienphapluat hay text qua clipboard). PDF thật bắt đầu b'%PDF';
+    không phải thì đây là text — thường UTF-16LE kèm BOM (tên file còn
+    hiện 'ÿþ' = BOM bị lỗi font).
+    Trả None nếu đúng là PDF.
+    """
+    with open(path, "rb") as f:
+        if f.read(8).startswith(b"%PDF"):
+            return None
+    raw = Path(path).read_bytes()
+    for enc in ("utf-16", "utf-8-sig", "utf-8"):
+        try:
+            return raw.decode(enc)
+        except UnicodeDecodeError:
+            continue
+    return raw.decode("utf-8", errors="replace")
+
+
 def parse_pdf(path: str) -> str:
+    # text-đóng-đuôi-pdf đọc trực tiếp; pdfplumber chỉ chạy khi đúng là PDF
+    text_file = _read_as_text(path)
+    if text_file is not None:
+        return text_file
+
     import pdfplumber
     text = ""
     with pdfplumber.open(path) as pdf:
@@ -89,6 +187,8 @@ def parse_all(
     config_path: str = "configs/data_sources.yaml",
     output_path: str = "data/processed/corpus.json",
 ):
+    from legal_ai.config.loader import load_data_sources
+
     try:
         data_sources = load_data_sources(config_path)
     except FileNotFoundError:

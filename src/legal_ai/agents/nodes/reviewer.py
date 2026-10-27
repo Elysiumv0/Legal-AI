@@ -35,6 +35,14 @@ CÂU HỎI: {question}
 
 TRẢ LỜI:"""
 
+# Retry path phải giữ nguyên ràng buộc của drafter: có citation VÀ disclaimer.
+# Trước đây retry dùng DRAFTER_PROMPT không có dòng disclaimer nên câu trả lời
+# đi qua reviewer-retry bị mất cảnh báo AI ở cuối.
+DISCLAIMER_SUFFIX = (
+    "\n\nCuối câu trả lời BẮT BUỘC thêm: "
+    '"Lưu ý: Đây là tư vấn sơ bộ, vui lòng tham khảo luật sư để được tư vấn chính xác."'
+)
+
 class ReviewerNode:
     def __init__(self, llm: LLMClient):
         self.llm = llm
@@ -57,7 +65,7 @@ class ReviewerNode:
                 {"role": "system", "content": "Bạn là trợ lý pháp lý chuyên nghiệp Việt Nam."},
                 {"role": "user",   "content": DRAFTER_PROMPT.format(
                     context=context, question=question
-                ) + RETRY_SUFFIX},
+                ) + DISCLAIMER_SUFFIX + RETRY_SUFFIX},
             ])
         docs, articles = extract_articles(chunks)
         return {

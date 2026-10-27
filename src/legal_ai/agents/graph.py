@@ -11,6 +11,8 @@ from legal_ai.models.embeddings import EmbeddingModel
 from legal_ai.retrieval.hybrid.fusion import HybridRetriever
 from legal_ai.models.reranker import Reranker
 from legal_ai.models.llm import LLMClient
+from legal_ai.config.schemas import Settings
+from legal_ai.retrieval.config import TOP_K_FINAL, TOP_K_RETRIEVE
 
 def route_after_critic(state: AgentState) -> str:
     if state.get("context_sufficient") or state.get("retrieval_attempts", 0) >= 3:
@@ -36,9 +38,12 @@ def build_graph(
     
     # Edges
     graph.add_edge("researcher", "critic")
+    # Dùng router có cap attempts, không phải lambda inline. Lambda cũ chỉ đọc
+    # context_sufficient: khi retrieval rỗng mãi, vòng researcher-critic chạy
+    # đến khi langgraph ném GraphRecursionError (recursion_limit=25).
     graph.add_conditional_edges(
         "critic",
-        lambda state: "drafter" if state["context_sufficient"] else "researcher",
+        route_after_critic,
         {"researcher": "researcher", "drafter": "drafter"}
     )
     graph.add_edge("drafter", "reviewer")
@@ -46,16 +51,26 @@ def build_graph(
     
     return graph.compile()
 
-def build_agent(config: dict):
+def build_agent(config: Settings):
+    """Dựng graph từ Settings (config/settings.yaml).
+
+    Trước đây đọc flat keys config["bm25_path"]... không tồn tại ở bất kỳ
+    loader nào (settings.yaml lồng theo paths/indexes/models.*) nên luôn
+    KeyError — dead code. Giờ đọc đúng schema + cho override thủ công để test.
+    """
     bm25 = BM25Retriever()
-    bm25.load(config["bm25_path"])
-    embedder = EmbeddingModel(config["embedding_model"])
-    store    = VectorStore(config["qdrant_path"])
+    bm25.load(str(config.indexes.bm25_path))
+    embedder = EmbeddingModel(config.models.embedding.name)
+    store    = VectorStore(str(config.indexes.qdrant_path))
     dense    = DenseRetriever(store, embedder)
     hybrid = HybridRetriever(bm25, dense)
-    reranker = Reranker(config["reranker_model"])
-    llm = LLMClient(config["llm_model_name"])
-    researcher = ResearcherNode(hybrid, reranker, llm)
+    reranker = Reranker(config.models.reranker.name)
+    llm = LLMClient(config.models.llm.model_name)
+    researcher = ResearcherNode(
+        hybrid, reranker, llm,
+        top_k_retrieve=TOP_K_RETRIEVE,
+        top_k_rerank=TOP_K_FINAL,
+    )
     critic     = CriticNode(llm)
     drafter    = DrafterNode(llm)
     reviewer   = ReviewerNode(llm)

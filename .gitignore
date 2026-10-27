@@ -1,7 +1,11 @@
 tests/
-scripts/
 data/
 .env
 __pycache__/
 *.pyc
+
+# Môi trường / bản tạm — git không cần
+.venv/
+src_orig/
+.scan-results/
 

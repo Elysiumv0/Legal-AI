@@ -155,7 +155,7 @@ class LongTermMemory:
             if self._similarity(query_vector, entry.get("vector", [])) >= self.threshold:
                 return
 
-        self.cache.append({
+        new_entry = {
             "question": query.strip(),
             "vector": query_vector,
             "result": result,
@@ -164,11 +164,15 @@ class LongTermMemory:
             "created_at": datetime.now(timezone.utc).isoformat(),
             "last_hit_at": None,
             "hit_count": 0,
-        })
+        }
+        self.cache.append(new_entry)
 
+        # Cùng bug như SemanticCache: entry mới hit_count=0 bị loại đầu tiên.
+        # Giữ entry mới ra khỏi vòng eviction.
         if len(self.cache) > self.max_entries:
-            self.cache.sort(key=lambda x: x.get("hit_count", 0), reverse=True)
-            self.cache = self.cache[:self.max_entries]
+            others = [e for e in self.cache if e is not new_entry]
+            others.sort(key=lambda x: x.get("hit_count", 0), reverse=True)
+            self.cache = others[: self.max_entries - 1] + [new_entry]
         self._save()
 
     def clear(self):

@@ -7,6 +7,33 @@ from underthesea import word_tokenize
 from legal_ai.retrieval.base import BaseRetriever
 from legal_ai.utils.text import normalize_whitespace
 
+def _strip_diacritics(s: str) -> str:
+    """Bo dau tieng Viet: 'thoi han' va 'thời hạn' ve cung mot dang.
+
+    Van ban OCR thuong mat dau ('dat đai' thay vi 'đất đai'), con user goi
+    co dau. Khong co buoc nay thi query 'dat' va corpus 'đất' la 2 token
+    khac nhau va BM25 khong bao gio khớp.
+
+    NFD roi lay ky tu base dau tien cho MOI ky tu - xu ly dung ca chu co 2
+    dau ('ất' = â + ́ + ̉ -> NFD thanh 3 ky tu -> lay 'a'). Viet tay bang
+    maketrans da sai 2 lan (lech do dai; thieu 'đ'), nen khong lam cach do.
+    """
+    import unicodedata
+
+    out = []
+    for ch in unicodedata.normalize("NFD", s):
+        if unicodedata.combining(ch):
+            continue
+        name = unicodedata.name(ch, "")
+        if name.startswith("LATIN SMALL LETTER D WITH STROKE"):
+            out.append("d")
+        elif name.startswith("LATIN CAPITAL LETTER D WITH STROKE"):
+            out.append("D")
+        else:
+            out.append(ch)
+    return unicodedata.normalize("NFC", "".join(out))
+
+
 def tokenize_vi(text: str) -> list[str]:
     text = text.lower()
     text = re.sub(r'điều\s+(\d+)', r'điều_\1', text)
@@ -15,7 +42,14 @@ def tokenize_vi(text: str) -> list[str]:
     tokens = [t.replace(" ", "_") for t in tokens]
     stopwords = {"và", "của", "các", "có", "được", "trong",
                  "là", "theo", "về", "này", "tại", "đến"}
-    return [t for t in tokens if t not in stopwords and len(t) > 1]
+    out = [t for t in tokens if t not in stopwords and len(t) > 1]
+    # CHUẨN HÓA VỀ KHÔNG DẤU cho cả corpus lẫn query. Trước đây giữ cả 2 dạng
+    # (return out + plain) làm số token mỗi document tăng gấp đôi: từ phổ biến
+    # ("công ty", "doanh nghiệp") chiếm thêm phần TF/DF và đẩy rối ranking —
+    # đo thực tế: top-1 cho câu "điều kiện thành lập TNHH một thành viên" tụt
+    # từ Điều 79 xuống Điều 37. Với 1 dạng chung, lệch dầu vẫn khớp mà phân bố
+    # score giữ nguyên như bạn gốc.
+    return [_strip_diacritics(t) for t in out]
 
 
 class BM25Retriever(BaseRetriever):

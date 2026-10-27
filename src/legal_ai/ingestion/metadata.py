@@ -1,5 +1,6 @@
 import re
 from dataclasses import dataclass, field
+from legal_ai.utils.text import HEADING_FOLLOWERS_RE
 @dataclass
 class LawMetadata:
     law_id:       str
@@ -42,10 +43,16 @@ def extract_structure(full_text_or_articles) -> dict[str, ArticleMetadata]:
         raw_text = full_text_or_articles
     lines = raw_text.split('\n')
     for line in lines:
-        line = line.strip()
-        if not line:
+        stripped = line.strip()
+        if not stripped:
             continue
-        ch = re.match(r'^(Chương\s+[IVXLCDM\d]+)[\.:]?\s*(.*)', line)
+        # Không strip trước khi match ARTICLE_HEADING: regex cần thấy
+        # "Điều 17 của Luật này" ở giữa dòng để loại, và "Điều 48 Tiêu chuẩn..."
+        # ở đầu dòng để nhận — cả hai phải cùng một định nghĩa với parsers.split_by.
+        # OCR co the mat dau ('Chuong II') hoac viet hoa thuong. Van ban
+        # thuc te: OCR cua Luat DN 2020 mat 13/16 dong tieu de Chuong, nen
+        # chapter se la None — do du lieu, khong phai loi code.
+        ch = re.match(r'^[Cc][Hh][UuƯ][OoƠ][Nn][Gg]\s+([IVXLCDM\d]+)[.:]?\s*(.*)', stripped, re.IGNORECASE)
         if ch:
             current_chapter      = ch.group(1).strip()
             current_chapter_name = ch.group(2).strip() or None
@@ -53,13 +60,15 @@ def extract_structure(full_text_or_articles) -> dict[str, ArticleMetadata]:
             current_section_name = None
             continue
 
-        sec = re.match(r'^(Mục\s+\d+)[\.:]?\s*(.*)', line)
+        sec = re.match(r'^(Mục\s+\d+)[\.:]?\s*(.*)', stripped)
         if sec:
             current_section      = sec.group(1).strip()
             current_section_name = sec.group(2).strip() or None
             continue
 
-        art = re.match(r'^(Điều\s+\d+[a-z]?)[\.\:]', line)
+        # Chấp nhận "Điều 47", "Điều 47.", "Điều 48 Tiêu chuẩn ...";
+        # loại "Điều 17 của Luật này" (trích dẫn giữa dòng).
+        art = HEADING_FOLLOWERS_RE.match(line)
         if art:
             article_id = art.group(1).strip()
             result[article_id] = ArticleMetadata(

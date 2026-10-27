@@ -3,12 +3,10 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-import yaml
-
-from legal_ai.config.schemas import AgentGraphSettings, DataSources, Settings
-
 
 def load_yaml(path: str | Path) -> dict[str, Any]:
+    import yaml
+
     config_path = Path(path)
     if not config_path.exists():
         raise FileNotFoundError(f"Config file not found: {config_path}")

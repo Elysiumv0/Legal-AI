@@ -26,7 +26,9 @@ def remove_page_artifacts(text: str) -> str:
         stripped = line.strip()
         if re.fullmatch(r'\d{1,3}', stripped):
             continue
-        if re.search(r'ThuVienPhapLuat|thuvienphapluat|028-\d+|\+84|\bTrang\b', stripped, re.IGNORECASE):
+        # Footer trang: chỉ khi "Trang" đứng cùng số trang. Không dùng \bTrang\b
+        # — nó xoá luôn câu thật như "Trang thiết bị phải bảo đảm an toàn".
+        if re.search(r'ThuVienPhapLuat|thuvienphapluat|028-\d+|\+84|\bTrang\s+\d+', stripped, re.IGNORECASE):
             continue
         if re.fullmatch(r'[-_.=*]{5,}', stripped):
             continue

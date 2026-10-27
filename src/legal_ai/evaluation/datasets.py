@@ -58,7 +58,10 @@ class EvalDataset:
             a for doc in corpus
             for a in doc["articles"]
         ]
-        sampled = random.sample(articles, min(n, len(articles)))
+        # Seed mặc định: eval phải tái lập được. Không seed thì hai lần chạy
+        # ra hai bộ câu khác nhau, không so sánh được trước/sau.
+        rng = random.Random(42)
+        sampled = rng.sample(articles, min(n, len(articles)))
 
         samples = [
             EvalSample(

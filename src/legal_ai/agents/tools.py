@@ -2,6 +2,7 @@ from langchain_core.tools import StructuredTool
 from pydantic import BaseModel, Field
 from legal_ai.retrieval.hybrid.fusion import HybridRetriever
 from legal_ai.models.reranker import Reranker
+from legal_ai.retrieval.config import TOP_K_FINAL
 class LegalSearchInput(BaseModel):
     query:      str = Field(description="Câu hỏi hoặc từ khóa pháp lý cần tìm")
     top_k:      int = Field(default=20, description="Số lượng kết quả trả về")
@@ -26,7 +27,7 @@ def make_hybrid_search_tool(
         results = hybrid.retrieve(query, top_k=top_k)
         if law_filter:
             results = [r for r in results if r["law_id"] == law_filter]
-        return reranker.rerank(query, results, top_k=10)
+        return reranker.rerank(query, results, top_k=TOP_K_FINAL)
     return StructuredTool(
         name="hybrid_search",
         description=(

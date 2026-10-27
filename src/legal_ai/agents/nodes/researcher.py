@@ -4,6 +4,7 @@ from legal_ai.agents.state import AgentState
 from legal_ai.retrieval.hybrid.fusion import HybridRetriever
 from legal_ai.models.reranker import Reranker
 from legal_ai.models.llm import LLMClient
+from legal_ai.retrieval.config import TOP_K_FINAL, TOP_K_RETRIEVE
 
 DECOMPOSE_PROMPT = """Bạn là chuyên gia pháp lý Việt Nam.
 Phân tích câu hỏi sau và tách thành các câu hỏi con đơn giản hơn nếu cần.
@@ -35,8 +36,8 @@ class ResearcherNode:
         hybrid_retriever: HybridRetriever,
         reranker: Reranker,
         llm: LLMClient,
-        top_k_retrieve: int = 20,
-        top_k_rerank: int = 15,
+        top_k_retrieve: int = TOP_K_RETRIEVE,
+        top_k_rerank: int = TOP_K_FINAL,
     ):
         self.hybrid   = hybrid_retriever
         self.reranker = reranker
